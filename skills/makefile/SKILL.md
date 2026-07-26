@@ -1,5 +1,5 @@
 ---
-name: make
+name: makefile
 description: Entrypoint standardization. Use when creating or updating build, test, run, environment, or Docker wrappers in a Makefile or equivalent package scripts.
 ---
 
