@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/runkids/skillshare/main/schemas/config.schema.json
+sources:
+  skills: ~/.config/skillshare/skills
+  agents: ~/.config/skillshare/agents
+git_root: root
+mode: merge
+targets:
+  claude:
+    skills:
+      path: ~/.claude/skills
+  codex:
+    skills:
+      path: ~/.codex-cli/skills
+extras:
+  - name: codex-instructions
+    targets:
+      - path: ~/.codex-cli
+        mode: merge
+  - name: claude-instructions
+    targets:
+      - path: ~/.claude
+        mode: merge
+  - name: codex-agents
+    targets:
+      - path: ~/.codex-cli/agents
+        mode: merge
+  - name: hooks
+    targets:
+      - path: ~/.codex-cli/hooks
+        mode: merge
+      - path: ~/.claude/hooks
+        mode: merge
+ignore:
+  - .DS_Store
+  - .git/
+  - __pycache__/
+audit:
+  block_threshold: CRITICAL
