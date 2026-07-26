@@ -1,6 +1,7 @@
 ---
 name: go
 description: Go backend guardrails. Use when changing or reviewing a Go backend, or when another skill needs its project constraints.
+disable-model-invocation: false
 ---
 
 # Go Backend Guardrails
