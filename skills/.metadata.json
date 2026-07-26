@@ -123,6 +123,43 @@
         "agents/openai.yaml": "sha256:075b2f1305938182c3aa4aa9b139fff0b7cfacb33b774c2e3e42180794e87394"
       }
     },
+    "generate2dmap": {
+      "source": "github.com/0x0funky/agent-sprite-forge/skills/generate2dmap",
+      "type": "github-subdir",
+      "installed_at": "2026-07-27T00:42:03.2746+08:00",
+      "repo_url": "https://github.com/0x0funky/agent-sprite-forge.git",
+      "subdir": "skills/generate2dmap",
+      "version": "64fd0b5",
+      "tree_hash": "61dedc764d5f750a9c6f18ee3920319b1a2f9bb5",
+      "file_hashes": {
+        "SKILL.md": "sha256:a691fd9ec000d1bafe851efdb3212e71b242ef0d9208448e02f617183d3f38e6",
+        "agents/openai.yaml": "sha256:bc71c1d9d8691babf1cbed8df4bf0ab1c5f4453537173ffaa818119c11049315",
+        "references/layered-map-contract.md": "sha256:cfb409ed5b07b1ced8d0b1f4012f5b29abb9106a74087a79d589ab2466a08ded",
+        "references/map-strategies.md": "sha256:08fb2f84b671ff57cc6c6a9598fbd35656f30c3f8864542db2ca4da2fc49aed6",
+        "references/prop-pack-contract.md": "sha256:39c48d2c26967724667b85f5389854a713204b572a721ab35edc4a55ceaa5fec",
+        "scripts/compose_layered_preview.py": "sha256:d1818c4257a4196a535041fd6e1d35c3b8f05c46d4a69bb45236e117da5f0a60",
+        "scripts/extract_prop_pack.py": "sha256:f5e8482abd6db573790a8471b23a7581d9e20d91c8bccb9fc53427b82610da1c",
+        "scripts/extract_terrain_tiles.py": "sha256:7779f82e6ee46894bfe933e04872587b1493a914ccf3176e3ee0b82a93629788"
+      }
+    },
+    "generate2dsprite": {
+      "source": "github.com/0x0funky/agent-sprite-forge/skills/generate2dsprite",
+      "type": "github-subdir",
+      "installed_at": "2026-07-27T00:42:03.348152+08:00",
+      "repo_url": "https://github.com/0x0funky/agent-sprite-forge.git",
+      "subdir": "skills/generate2dsprite",
+      "version": "64fd0b5",
+      "tree_hash": "fb1f52a24a10c6fd01eba3c00703b9905d4840b9",
+      "file_hashes": {
+        "SKILL.md": "sha256:4e04edbcc96a182e9e5496329bfb2c2b353c72d2efec2afdb8bb7fc1da984288",
+        "agents/openai.yaml": "sha256:6152378c9cf6c4225b34b1cd74ccb433c046397a67556bc76e807dee2abcd9f3",
+        "references/modes.md": "sha256:98cf26c70213921973c906257e3da9fdfbc9190b9c3e23cb71de6385e775abc9",
+        "references/prompt-rules.md": "sha256:28653c6f912c2d935d8e2ec3c4539d60ef38653218099cfa8262f94cff7cf018",
+        "scripts/generate2dsprite.py": "sha256:7b7451a711f9dbf806db1586567920dbe2a487d481b7f016e14db66d8050997b",
+        "scripts/make_anchor_layout.py": "sha256:34f71c880cd868fa417ab291e475847bcb7beeac0a3a50883c8daa88cc88308b",
+        "scripts/make_layout_guide.py": "sha256:b613e48fb0e9a025dc3ceba35886b4689fa780499e0276783532cd3cfdf9a52d"
+      }
+    },
     "git-guardrails-claude-code": {
       "source": "github.com/mattpocock/skills/skills/misc/git-guardrails-claude-code",
       "type": "github-subdir",
@@ -477,6 +514,22 @@
       "file_hashes": {
         "SKILL.md": "sha256:2449e2345b96b9f1e861c697b5eab50d03ae1254481a4306b6f815684e523b3a",
         "agents/openai.yaml": "sha256:c962ab4ee84d580469aa8cd0b7a8de7aca93665b09e7b134b694a349962bc661"
+      }
+    },
+    "video2dsprite": {
+      "source": "github.com/0x0funky/agent-sprite-forge/skills/video2dsprite",
+      "type": "github-subdir",
+      "installed_at": "2026-07-27T00:42:03.374661+08:00",
+      "repo_url": "https://github.com/0x0funky/agent-sprite-forge.git",
+      "subdir": "skills/video2dsprite",
+      "version": "64fd0b5",
+      "tree_hash": "4e3b67eeafbd294b8e7797a0058f3e5ea1afe18f",
+      "file_hashes": {
+        "SKILL.md": "sha256:d6d5a642dc10ae84d7912fb0698aa47779d74982c8160cbf15c3dc40f1a49300",
+        "agents/openai.yaml": "sha256:a4c526d5b9c06fe223db6eb6e4f096e6a52a88aafbccadf63cc497ccc27d1526",
+        "references/pipeline.md": "sha256:a565ee27a8fb781efda106cecfc05bec7920af35b2106e33e121a981065fc66c",
+        "references/prompt-rules.md": "sha256:540eed46dfb727824bdd3dbc2ed63fa051e716e5c305708d44b2eee85bf9433d",
+        "scripts/video2dsprite.py": "sha256:2b68c7072a363d121a9aff33c99f32396f98713f1334dde5f0034ac39f77a3b4"
       }
     },
     "wayfinder": {
