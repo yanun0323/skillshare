@@ -12,6 +12,12 @@ targets:
     skills:
       path: ~/.codex-cli/skills
 extras:
+  - name: instructions
+    targets:
+      - path: ~/.codex-cli
+        mode: merge
+      - path: ~/.claude
+        mode: merge
   - name: codex-instructions
     targets:
       - path: ~/.codex-cli
