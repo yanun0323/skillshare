@@ -8,7 +8,7 @@
     "ANTHROPIC_DEFAULT_HAIKU_MODEL": "gpt-5.3-codex-spark(high)"
   },
   "permissions": {
-    "allow": [ ],
+    "allow": [],
     "defaultMode": "bypassPermissions"
   },
   "hooks": {
@@ -48,5 +48,6 @@
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark",
   "editorMode": "normal",
-  "preferredNotifChannel": "notifications_disabled"
+  "preferredNotifChannel": "notifications_disabled",
+  "model": "opus"
 }
