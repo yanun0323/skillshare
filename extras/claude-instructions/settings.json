@@ -11,6 +11,7 @@
     "allow": [],
     "defaultMode": "bypassPermissions"
   },
+  "model": "opus",
   "hooks": {
     "PreToolUse": [
       {
@@ -33,21 +34,12 @@
     "gopls-lsp@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
-    "rust-analyzer-lsp@claude-plugins-official": true,
-    "mattpocock-skills@mattpocock": true
+    "rust-analyzer-lsp@claude-plugins-official": true
   },
-  "extraKnownMarketplaces": {
-    "mattpocock": {
-      "source": {
-        "source": "github",
-        "repo": "mattpocock/skills"
-      }
-    }
-  },
+  "extraKnownMarketplaces": {},
   "effortLevel": "medium",
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark",
   "editorMode": "normal",
-  "preferredNotifChannel": "notifications_disabled",
-  "model": "opus"
+  "preferredNotifChannel": "notifications_disabled"
 }
