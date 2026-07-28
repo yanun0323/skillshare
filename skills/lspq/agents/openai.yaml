@@ -1,0 +1,3 @@
+interface:
+  display_name: 'LSPQ'
+  short_description: 'Semantic code navigation through LSP'
