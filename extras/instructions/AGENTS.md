@@ -19,6 +19,16 @@ Gather the necessary evidence, then make the smallest coherent change that reach
 
 - Prefer the shortest useful tool path that preserves correctness, required evidence, calculations, and citations. Try one or two meaningful fallbacks when a lookup is empty, partial, or suspiciously narrow.
 - Parallelize independent reads and keep dependent work sequential. Delegate bounded, independently verifiable work when it materially improves speed or quality; give parallel writers non-overlapping ownership, with the primary agent responsible for integration and final verification.
+
+### Subagent Routing
+
+- Route implementation, fixes, and refactors to the `worker` custom agent with `agent_type = "worker"`.
+- Route code review, spec conformance, standards audits, security assessment, and regression or test-gap analysis to the `reviewer` custom agent with `agent_type = "reviewer"`.
+- Route read-only codebase discovery, dependency tracing, and impact analysis to the `explorer` custom agent with `agent_type = "explorer"`.
+- Route every other delegated task by write authority: writable tasks use `worker`, and read-only tasks use `explorer`.
+- Use `fork_turns = "none"` for self-contained briefs and a bounded positive value for briefs that require recent conversation context.
+- Complete routing when every spawn has an explicit `agent_type`, bounded ownership, a validation target, and a requested return format.
+
 - Keep changes localized and consistent with surrounding patterns. Preserve public APIs, dependencies, tooling, repository structure, and architecture unless the outcome requires changing them.
 - Keep credentials and secrets out of source, frontend code, logs, and user-facing errors. Handle tokens and personally identifiable information (PII) only within explicit authority, using established cryptographic libraries and patterns.
 - For multi-step work, give one brief preamble before tools. Update the user only at major phase changes or when new evidence changes the approach.

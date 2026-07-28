@@ -1,0 +1,5 @@
+interface:
+  display_name: 'Run with Subagents'
+  short_description: "Use subagents to execute the user's task"
+policy:
+  allow_implicit_invocation: false

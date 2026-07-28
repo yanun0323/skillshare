@@ -30,6 +30,10 @@ extras:
     targets:
       - path: ~/.codex-cli/agents
         mode: merge
+  - name: claude-agents
+    targets:
+      - path: ~/.claude/agents
+        mode: merge
   - name: hooks
     targets:
       - path: ~/.codex-cli/hooks
