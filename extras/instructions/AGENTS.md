@@ -25,7 +25,7 @@ Gather the necessary evidence, then make the smallest coherent change that reach
 - Route implementation, fixes, and refactors to the `worker` custom agent with `agent_type = "worker"`.
 - Route code review, spec conformance, standards audits, security assessment, and regression or test-gap analysis to the `reviewer` custom agent with `agent_type = "reviewer"`.
 - Route read-only codebase discovery, dependency tracing, and impact analysis to the `explorer` custom agent with `agent_type = "explorer"`.
-- Route every other delegated task by write authority: writable tasks use `worker`, and read-only tasks use `explorer`.
+- Route general-purpose analysis, coordination, synthesis, and cross-specialist tasks to the `default` custom agent with `agent_type = "default"`.
 - Use `fork_turns = "none"` for self-contained briefs and a bounded positive value for briefs that require recent conversation context.
 - Complete routing when every spawn has an explicit `agent_type`, bounded ownership, a validation target, and a requested return format.
 
