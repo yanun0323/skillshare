@@ -28,12 +28,13 @@ Inspect file structure:
 lspq symbols --language "$language" --workspace "$workspace" --file "$file"
 ```
 
-Query a position:
+Query a position, or aggregate the independent position queries in one server session:
 
 ```sh
 lspq hover      --language "$language" --workspace "$workspace" --file "$file" --line "$line" --character "$character"
 lspq definition --language "$language" --workspace "$workspace" --file "$file" --line "$line" --character "$character"
 lspq references --language "$language" --workspace "$workspace" --file "$file" --line "$line" --character "$character"
+lspq inspect    --language "$language" --workspace "$workspace" --file "$file" --line "$line" --character "$character" --include hover,definition,references
 ```
 
 Choose one command per question:
@@ -44,8 +45,20 @@ Choose one command per question:
 | What is the type, signature, or documentation here? | `hover` |
 | Where is this occurrence defined? | `definition` |
 | Which occurrences resolve to this symbol? | `references` |
+| Need hover, definition, and/or references together? | `inspect` |
+| Need a bounded relationship graph? | `trace` |
 
 This step is complete when the command exits successfully and stdout is valid JSON for the requested command.
+
+For relationship traversal, keep the graph bounded and choose only the relations needed:
+
+```sh
+lspq trace --language "$language" --workspace "$workspace" --file "$file" \
+  --line "$line" --character "$character" \
+  --relations calls,types --direction both --depth 2 --max-nodes 100
+```
+
+`calls` edges are caller → callee; `types` edges are subtype → supertype; `implementations` edges are anchor → implementation and remain one hop regardless of `--direction`. Trace evaluates selected relations in canonical `calls`, `types`, `implementations` order. Treat `truncated: true`, `relationErrors`, and `cleanupError` as incomplete coverage, not negative evidence. `inspect` likewise returns section-level errors while preserving successful sections.
 
 ## 3. Follow semantic evidence
 
