@@ -4,7 +4,7 @@
     "ask-matt": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/ask-matt",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.784065+08:00",
+      "installed_at": "2026-07-29T16:25:55.686955+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/ask-matt",
       "version": "2ab9580",
@@ -17,7 +17,7 @@
     "code-review": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/code-review",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.507368+08:00",
+      "installed_at": "2026-07-29T16:25:55.70283+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/code-review",
       "version": "2ab9580",
@@ -30,7 +30,7 @@
     "codebase-design": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/codebase-design",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.68499+08:00",
+      "installed_at": "2026-07-29T16:25:55.778602+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/codebase-design",
       "version": "2ab9580",
@@ -45,7 +45,7 @@
     "diagnosing-bugs": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/diagnosing-bugs",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.619336+08:00",
+      "installed_at": "2026-07-29T16:25:55.52825+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/diagnosing-bugs",
       "version": "2ab9580",
@@ -59,7 +59,7 @@
     "domain-modeling": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/domain-modeling",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.697841+08:00",
+      "installed_at": "2026-07-29T16:25:55.792477+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/domain-modeling",
       "version": "2ab9580",
@@ -74,7 +74,7 @@
     "edit-article": {
       "source": "https://github.com/mattpocock/skills.git/skills/personal/edit-article",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.628589+08:00",
+      "installed_at": "2026-07-29T16:25:55.453935+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/personal/edit-article",
       "version": "2ab9580",
@@ -87,7 +87,7 @@
     "generate2dmap": {
       "source": "https://github.com/0x0funky/agent-sprite-forge.git/skills/generate2dmap",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:38.533066+08:00",
+      "installed_at": "2026-07-29T16:26:01.989151+08:00",
       "repo_url": "https://github.com/0x0funky/agent-sprite-forge.git",
       "subdir": "skills/generate2dmap",
       "version": "64fd0b5",
@@ -106,7 +106,7 @@
     "generate2dsprite": {
       "source": "https://github.com/0x0funky/agent-sprite-forge.git/skills/generate2dsprite",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:38.440843+08:00",
+      "installed_at": "2026-07-29T16:26:02.063974+08:00",
       "repo_url": "https://github.com/0x0funky/agent-sprite-forge.git",
       "subdir": "skills/generate2dsprite",
       "version": "64fd0b5",
@@ -124,7 +124,7 @@
     "grill-me": {
       "source": "https://github.com/mattpocock/skills.git/skills/productivity/grill-me",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.792861+08:00",
+      "installed_at": "2026-07-29T16:25:55.54002+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/productivity/grill-me",
       "version": "2ab9580",
@@ -137,7 +137,7 @@
     "grill-with-docs": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/grill-with-docs",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.801373+08:00",
+      "installed_at": "2026-07-29T16:25:55.563579+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/grill-with-docs",
       "version": "2ab9580",
@@ -150,7 +150,7 @@
     "grilling": {
       "source": "https://github.com/mattpocock/skills.git/skills/productivity/grilling",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.637495+08:00",
+      "installed_at": "2026-07-29T16:25:55.574083+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/productivity/grilling",
       "version": "2ab9580",
@@ -163,7 +163,7 @@
     "handoff": {
       "source": "https://github.com/mattpocock/skills.git/skills/productivity/handoff",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.647271+08:00",
+      "installed_at": "2026-07-29T16:25:55.714839+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/productivity/handoff",
       "version": "2ab9580",
@@ -176,7 +176,7 @@
     "implement": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/implement",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.712903+08:00",
+      "installed_at": "2026-07-29T16:25:55.465783+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/implement",
       "version": "2ab9580",
@@ -189,7 +189,7 @@
     "improve-codebase-architecture": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/improve-codebase-architecture",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.661451+08:00",
+      "installed_at": "2026-07-29T16:25:55.731163+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/improve-codebase-architecture",
       "version": "2ab9580",
@@ -203,13 +203,13 @@
     "lspq": {
       "source": "https://github.com/yanun0323/lspq.git/skills/lspq",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:39.571237+08:00",
+      "installed_at": "2026-07-29T16:26:02.938269+08:00",
       "repo_url": "https://github.com/yanun0323/lspq.git",
       "subdir": "skills/lspq",
-      "version": "66af030",
-      "tree_hash": "01252f08842d4996e27d3426427214bd603a341e",
+      "version": "1b9ef1c",
+      "tree_hash": "a178216292ccf53efb0d2cbe60122fb4cd988cbf",
       "file_hashes": {
-        "SKILL.md": "sha256:ede3bc216fbd2537e59730dc3761bab7fdac6cd52e5275b9ddd7b6cdc2d2b79b",
+        "SKILL.md": "sha256:29bad468d8800413d3e36607fc371a10152a3c8c528f1f528d54090ac5002819",
         "TROUBLESHOOTING.md": "sha256:69c6e4b6f365eb47d40617ae5103141e58eb99b6d4fb48d9fb6600e134ff677f",
         "agents/openai.yaml": "sha256:ae0167353fe32573b0a6bf5d087c09c529899df464e5d4ea89ee54af708829ff"
       }
@@ -217,7 +217,7 @@
     "prototype": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/prototype",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.52591+08:00",
+      "installed_at": "2026-07-29T16:25:55.484024+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/prototype",
       "version": "2ab9580",
@@ -232,7 +232,7 @@
     "research": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/research",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.536407+08:00",
+      "installed_at": "2026-07-29T16:25:55.495248+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/research",
       "version": "2ab9580",
@@ -245,7 +245,7 @@
     "resolving-merge-conflicts": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/resolving-merge-conflicts",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.545909+08:00",
+      "installed_at": "2026-07-29T16:25:55.741466+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/resolving-merge-conflicts",
       "version": "2ab9580",
@@ -258,7 +258,7 @@
     "scaffold-exercises": {
       "source": "https://github.com/mattpocock/skills.git/skills/misc/scaffold-exercises",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.811802+08:00",
+      "installed_at": "2026-07-29T16:25:55.586702+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/misc/scaffold-exercises",
       "version": "2ab9580",
@@ -271,7 +271,7 @@
     "setup-matt-pocock-skills": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/setup-matt-pocock-skills",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.733984+08:00",
+      "installed_at": "2026-07-29T16:25:55.607475+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/setup-matt-pocock-skills",
       "version": "2ab9580",
@@ -289,7 +289,7 @@
     "tdd": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/tdd",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.55816+08:00",
+      "installed_at": "2026-07-29T16:25:55.621897+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/tdd",
       "version": "2ab9580",
@@ -304,7 +304,7 @@
     "teach": {
       "source": "https://github.com/mattpocock/skills.git/skills/productivity/teach",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.752271+08:00",
+      "installed_at": "2026-07-29T16:25:55.513254+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/productivity/teach",
       "version": "2ab9580",
@@ -321,7 +321,7 @@
     "to-spec": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/to-spec",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.671495+08:00",
+      "installed_at": "2026-07-29T16:25:55.633978+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/to-spec",
       "version": "2ab9580",
@@ -334,7 +334,7 @@
     "to-tickets": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/to-tickets",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.569669+08:00",
+      "installed_at": "2026-07-29T16:25:55.553059+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/to-tickets",
       "version": "2ab9580",
@@ -347,7 +347,7 @@
     "triage": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/triage",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.7712+08:00",
+      "installed_at": "2026-07-29T16:25:55.654241+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/triage",
       "version": "2ab9580",
@@ -362,7 +362,7 @@
     "video2dsprite": {
       "source": "https://github.com/0x0funky/agent-sprite-forge.git/skills/video2dsprite",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:38.467469+08:00",
+      "installed_at": "2026-07-29T16:26:01.919628+08:00",
       "repo_url": "https://github.com/0x0funky/agent-sprite-forge.git",
       "subdir": "skills/video2dsprite",
       "version": "64fd0b5",
@@ -378,7 +378,7 @@
     "wayfinder": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/wayfinder",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.583708+08:00",
+      "installed_at": "2026-07-29T16:25:55.671561+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/engineering/wayfinder",
       "version": "2ab9580",
@@ -391,7 +391,7 @@
     "writing-great-skills": {
       "source": "https://github.com/mattpocock/skills.git/skills/productivity/writing-great-skills",
       "type": "github-subdir",
-      "installed_at": "2026-07-28T18:07:08.605111+08:00",
+      "installed_at": "2026-07-29T16:25:55.763218+08:00",
       "repo_url": "https://github.com/mattpocock/skills.git",
       "subdir": "skills/productivity/writing-great-skills",
       "version": "2ab9580",
