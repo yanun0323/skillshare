@@ -1,0 +1,42 @@
+#!/bin/sh
+
+set -eu
+
+script_dir=$(CDPATH= cd -P "$(dirname "$0")" && pwd)
+
+case "$(uname -s)" in
+	Darwin) os=darwin ;;
+	Linux) os=linux ;;
+	CYGWIN*|MINGW*|MSYS*) os=windows ;;
+	*)
+		printf '%s\n' "error: the bundled lspq launcher does not support operating system $(uname -s)" >&2
+		exit 1
+		;;
+esac
+
+case "$(uname -m)" in
+	x86_64|amd64) arch=amd64 ;;
+	arm64|aarch64) arch=arm64 ;;
+	*)
+		printf '%s\n' "error: the bundled lspq launcher does not support architecture $(uname -m)" >&2
+		exit 1
+		;;
+esac
+
+binary_name=lspq
+if [ "$os" = windows ]; then
+	binary_name=lspq.exe
+fi
+binary="$script_dir/../bin/$os-$arch/$binary_name"
+
+if [ ! -f "$binary" ]; then
+	printf '%s\n' "error: the lspq skill bundle has no executable for $os/$arch: $binary" >&2
+	printf '%s\n' 'update or reinstall the lspq skill so SKILL.md and its executable are delivered together' >&2
+	exit 127
+fi
+if [ ! -x "$binary" ]; then
+	printf '%s\n' "error: the bundled lspq executable is not executable: $binary" >&2
+	exit 126
+fi
+
+exec "$binary" "$@"

@@ -2,21 +2,23 @@
 
 Read this reference only after the main semantic query cannot produce usable evidence.
 
-## `lspq` is unavailable
+## Bundled `lspq` is unavailable
 
-Check the executable:
-
-```sh
-command -v lspq
-```
-
-Installing a user-level executable and language toolchains changes the environment. Obtain user approval before running:
+Use the absolute `lspq_exec` established from the directory containing `SKILL.md`. Check both the launcher and the selected platform binary by invoking the launcher:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/yanun0323/lspq/master/install.sh | sh
+"$lspq_exec"
 ```
 
-If the repository contains the lspq source, it can be exercised without installation:
+Do not fall back to a `lspq` found on `PATH`; it may implement a different command or output contract. If the launcher reports a missing platform binary, update or reinstall the complete skill. Installing or updating a skill changes the environment, so obtain user approval before doing it.
+
+If the repository containing the lspq source is available, maintainers can rebuild the host bundle without installing it globally:
+
+```sh
+make skill-build
+```
+
+The source tree can also exercise a command without installation, but this is a diagnostic fallback rather than the skill's normal execution path:
 
 ```sh
 go run ./cmd/lspq <command> ...
@@ -27,7 +29,7 @@ go run ./cmd/lspq <command> ...
 Run the adapter health check with the same workspace and timeout:
 
 ```sh
-lspq doctor --language "$language" --workspace "$workspace" --timeout 30s
+"$lspq_exec" doctor --language "$language" --workspace "$workspace" --timeout 30s
 ```
 
 The built-in executables are:
@@ -43,7 +45,7 @@ The built-in executables are:
 Use an installed server outside PATH with `--server`; supply each replacement argument with a separate `--server-arg`:
 
 ```sh
-lspq doctor --language python --workspace "$workspace" \
+"$lspq_exec" doctor --language python --workspace "$workspace" \
   --server /absolute/path/pyright-langserver --server-arg=--stdio
 ```
 

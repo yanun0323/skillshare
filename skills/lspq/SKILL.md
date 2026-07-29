@@ -7,7 +7,20 @@ description: Semantic code navigation through LSP. Use when the user wants a fil
 
 LSP navigation starts from a **semantic anchor**: one workspace, source file, language, and—when required—zero-based position. Use textual search to find candidate anchors; use `lspq` to prove symbol identity.
 
-## 1. Establish the semantic anchor
+## 1. Resolve the bundled executable
+
+Resolve the absolute directory containing this `SKILL.md`, then establish the launcher once for the current shell invocation:
+
+```sh
+lspq_exec="<absolute skill directory>/scripts/lspq"
+test -x "$lspq_exec"
+```
+
+Use this launcher for every command below. Do not substitute a `lspq` found on `PATH`: the bundled executable is released with this file so their command and output contracts remain synchronized.
+
+This step is complete when `lspq_exec` is an absolute path to the executable launcher adjacent to this skill.
+
+## 2. Establish the semantic anchor
 
 Resolve:
 
@@ -20,21 +33,21 @@ For a named declaration, run `symbols` first and use its matching symbol range a
 
 This step is complete when the anchor identifies one exact source occurrence. If multiple same-name candidates remain, inspect their surrounding source until one is selected.
 
-## 2. Run the narrowest semantic query
+## 3. Run the narrowest semantic query
 
 Inspect file structure:
 
 ```sh
-lspq symbols --language "$language" --workspace "$workspace" --file "$file"
+"$lspq_exec" symbols --language "$language" --workspace "$workspace" --file "$file"
 ```
 
 Query a position, or aggregate the independent position queries in one server session:
 
 ```sh
-lspq hover      --language "$language" --workspace "$workspace" --file "$file" --line "$line" --character "$character"
-lspq definition --language "$language" --workspace "$workspace" --file "$file" --line "$line" --character "$character"
-lspq references --language "$language" --workspace "$workspace" --file "$file" --line "$line" --character "$character"
-lspq inspect    --language "$language" --workspace "$workspace" --file "$file" --line "$line" --character "$character" --include hover,definition,references
+"$lspq_exec" hover      --language "$language" --workspace "$workspace" --file "$file" --line "$line" --character "$character"
+"$lspq_exec" definition --language "$language" --workspace "$workspace" --file "$file" --line "$line" --character "$character"
+"$lspq_exec" references --language "$language" --workspace "$workspace" --file "$file" --line "$line" --character "$character"
+"$lspq_exec" inspect    --language "$language" --workspace "$workspace" --file "$file" --line "$line" --character "$character" --include hover,definition,references
 ```
 
 Choose one command per question:
@@ -53,14 +66,14 @@ This step is complete when the command exits successfully and stdout is valid JS
 For relationship traversal, keep the graph bounded and choose only the relations needed:
 
 ```sh
-lspq trace --language "$language" --workspace "$workspace" --file "$file" \
+"$lspq_exec" trace --language "$language" --workspace "$workspace" --file "$file" \
   --line "$line" --character "$character" \
   --relations calls,types --direction both --depth 2 --max-nodes 100
 ```
 
 `calls` edges are caller → callee; `types` edges are subtype → supertype; `implementations` edges are anchor → implementation and remain one hop regardless of `--direction`. Trace evaluates selected relations in canonical `calls`, `types`, `implementations` order. Treat `truncated: true`, `relationErrors`, and `cleanupError` as incomplete coverage, not negative evidence. `inspect` likewise returns section-level errors while preserving successful sections.
 
-## 3. Follow semantic evidence
+## 4. Follow semantic evidence
 
 - For `symbols`, traverse nested `children` and match by name, kind, and enclosing symbol.
 - For `definition`, open every returned URI/range needed to identify the owning declaration.
@@ -73,4 +86,4 @@ This step is complete when every claim in the answer is backed by a returned sem
 
 ## Recovery branch
 
-When `lspq` is missing, exits non-zero, returns an error envelope, or unexpectedly returns no result, read [TROUBLESHOOTING.md](TROUBLESHOOTING.md) and recover there before answering.
+When the bundled launcher or executable is missing, exits non-zero, returns an error envelope, or unexpectedly returns no result, read [TROUBLESHOOTING.md](TROUBLESHOOTING.md) and recover there before answering.
