@@ -10,7 +10,7 @@ disable-model-invocation: true
 
 Operate entirely through known read-only actions. Keep files, dependencies, processes, external systems, and Git history unchanged.
 
-If the request includes a mutation, treat that part as a request for analysis or a proposed plan. State that `action-chat` is read-only and that implementation requires leaving this mode. The boundary is established when every requested action is classified as inspection or mutation and only inspection remains executable.
+If the request includes a mutation, treat that part as a request for analysis or a proposed plan. State that `chat` is read-only and that implementation requires leaving this mode. The boundary is established when every requested action is classified as inspection or mutation and only inspection remains executable.
 
 ## 2. Gather Evidence
 
