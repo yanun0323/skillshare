@@ -11,6 +11,9 @@ targets:
   codex:
     skills:
       path: ~/.codex-cli/skills
+  pi:
+    skills:
+      path: ~/.pi/agent/skills
 extras:
   - name: instructions
     targets:
@@ -33,6 +36,10 @@ extras:
   - name: claude-agents
     targets:
       - path: ~/.claude/agents
+        mode: merge
+  - name: pi-prompts
+    targets:
+      - path: ~/.pi/agent/prompts
         mode: merge
   - name: hooks
     targets:
