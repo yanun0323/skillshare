@@ -366,22 +366,6 @@
         "agents/openai.yaml": "sha256:2e683717720cf456d165d0bb1a68bb600d0b6a8ccb61841c172e50d26f95351c"
       }
     },
-    "video2dsprite": {
-      "source": "https://github.com/0x0funky/agent-sprite-forge.git/skills/video2dsprite",
-      "type": "github-subdir",
-      "installed_at": "2026-07-29T20:53:09.62656+08:00",
-      "repo_url": "https://github.com/0x0funky/agent-sprite-forge.git",
-      "subdir": "skills/video2dsprite",
-      "version": "64fd0b5",
-      "tree_hash": "4e3b67eeafbd294b8e7797a0058f3e5ea1afe18f",
-      "file_hashes": {
-        "SKILL.md": "sha256:d6d5a642dc10ae84d7912fb0698aa47779d74982c8160cbf15c3dc40f1a49300",
-        "agents/openai.yaml": "sha256:a4c526d5b9c06fe223db6eb6e4f096e6a52a88aafbccadf63cc497ccc27d1526",
-        "references/pipeline.md": "sha256:a565ee27a8fb781efda106cecfc05bec7920af35b2106e33e121a981065fc66c",
-        "references/prompt-rules.md": "sha256:540eed46dfb727824bdd3dbc2ed63fa051e716e5c305708d44b2eee85bf9433d",
-        "scripts/video2dsprite.py": "sha256:2b68c7072a363d121a9aff33c99f32396f98713f1334dde5f0034ac39f77a3b4"
-      }
-    },
     "wayfinder": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/wayfinder",
       "type": "github-subdir",
