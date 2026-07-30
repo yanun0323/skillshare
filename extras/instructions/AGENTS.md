@@ -22,14 +22,19 @@ Gather the necessary evidence, then make the smallest coherent change that reach
 
 ### Subagent Routing
 
-- Route implementation, fixes, and refactors to the `worker` custom agent with `agent_type = "worker"`.
-- Route code review, spec conformance, standards audits, security assessment, and regression or test-gap analysis to the `reviewer` custom agent with `agent_type = "reviewer"`.
-- Route read-only codebase discovery, dependency tracing, and impact analysis to the `explorer` custom agent with `agent_type = "explorer"`.
-- Route general-purpose analysis, coordination, synthesis, and cross-specialist tasks to the `default` custom agent with `agent_type = "default"`.
-- Pin every spawn to its role model by setting an explicit `agent_type` and `fork_turns = "none"` or a bounded positive value. An omitted `fork_turns` or `fork_turns = "all"` is a full-history fork that inherits the parent model rather than the role model.
-- Prefer a self-contained handoff with `fork_turns = "none"`; use a bounded positive value only when exact recent turns materially affect the task.
-- Continue only role-pinned agents. When more work follows a full-history fork, spawn a fresh role-pinned agent with a self-contained handoff.
-- Complete routing when every spawn and continuation preserves the configured role model and has bounded ownership, a validation target, and a requested return format.
+- Treat Claude Code subagent names in downstream skills and prompts as compatibility aliases. Resolve them case-insensitively before spawning:
+  - `Explore` routes to the `explorer` custom agent with `agent_type = "explorer"`.
+  - `Plan` routes to the `default` custom agent with `agent_type = "default"`; keep the handoff read-only and request a plan.
+  - `general-purpose` routes to the `general-purpose` custom agent with `agent_type = "general-purpose"`.
+  - Any other Claude Code subagent name routes to the `default` custom agent with `agent_type = "default"`.
+- When no Claude Code compatibility alias is named, route by task:
+  - Implementation, fixes, and refactors route to `worker`.
+  - Code review, spec conformance, standards audits, security assessment, and regression or test-gap analysis route to `reviewer`.
+  - Read-only codebase discovery, dependency tracing, and impact analysis route to `explorer`.
+  - General-purpose analysis, coordination, synthesis, and cross-specialist tasks route to `default`.
+- Spawn the resolved custom agent with its explicit `agent_type` and `fork_turns = "none"` or a bounded positive value so its configured role model is used. Prefer `fork_turns = "none"`; use bounded recent context only when the handoff depends on exact recent turns.
+- Continue role-pinned agents. Replace a full-history fork with a fresh role-pinned agent and a self-contained handoff.
+- Complete routing when every spawn and continuation resolves to an installed custom role with its configured model, bounded ownership, a validation target, and a requested return format.
 
 - Keep changes localized and consistent with surrounding patterns. Preserve public APIs, dependencies, tooling, repository structure, and architecture unless the outcome requires changing them.
 - Keep credentials and secrets out of source, frontend code, logs, and user-facing errors. Handle tokens and personally identifiable information (PII) only within explicit authority, using established cryptographic libraries and patterns.
