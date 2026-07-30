@@ -26,8 +26,10 @@ Gather the necessary evidence, then make the smallest coherent change that reach
 - Route code review, spec conformance, standards audits, security assessment, and regression or test-gap analysis to the `reviewer` custom agent with `agent_type = "reviewer"`.
 - Route read-only codebase discovery, dependency tracing, and impact analysis to the `explorer` custom agent with `agent_type = "explorer"`.
 - Route general-purpose analysis, coordination, synthesis, and cross-specialist tasks to the `default` custom agent with `agent_type = "default"`.
-- Use `fork_turns = "none"` for self-contained briefs and a bounded positive value for briefs that require recent conversation context.
-- Complete routing when every spawn has an explicit `agent_type`, bounded ownership, a validation target, and a requested return format.
+- Pin every spawn to its role model by setting an explicit `agent_type` and `fork_turns = "none"` or a bounded positive value. An omitted `fork_turns` or `fork_turns = "all"` is a full-history fork that inherits the parent model rather than the role model.
+- Prefer a self-contained handoff with `fork_turns = "none"`; use a bounded positive value only when exact recent turns materially affect the task.
+- Continue only role-pinned agents. When more work follows a full-history fork, spawn a fresh role-pinned agent with a self-contained handoff.
+- Complete routing when every spawn and continuation preserves the configured role model and has bounded ownership, a validation target, and a requested return format.
 
 - Keep changes localized and consistent with surrounding patterns. Preserve public APIs, dependencies, tooling, repository structure, and architecture unless the outcome requires changing them.
 - Keep credentials and secrets out of source, frontend code, logs, and user-facing errors. Handle tokens and personally identifiable information (PII) only within explicit authority, using established cryptographic libraries and patterns.
