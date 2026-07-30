@@ -3,15 +3,18 @@
   "env": {
     "ANTHROPIC_BASE_URL": "http://127.0.0.1:8317",
     "ANTHROPIC_AUTH_TOKEN": "sk-dummy",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "gpt-5.6-sol(high)",
+    "ANTHROPIC_DEFAULT_FABLE_MODEL": "gpt-5.6-sol(high)",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "gpt-5.6-terra(high)",
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "gpt-5.6-terra(high)",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "gpt-5.3-codex-spark(high)"
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "gpt-5.3-codex-spark(high)",
+    "CLAUDE_CODE_IDE_SKIP_AUTO_INSTALL": "1",
+    "CLAUDE_CODE_AUTO_COMPACT_WINDOW": "272000"
   },
   "permissions": {
-    "allow": [ ],
+    "allow": [],
     "defaultMode": "bypassPermissions"
   },
-  "model": "opus",
+  "model": "fable",
   "hooks": {
     "PreToolUse": [
       {
@@ -36,7 +39,7 @@
     "typescript-lsp@claude-plugins-official": true,
     "rust-analyzer-lsp@claude-plugins-official": true
   },
-  "extraKnownMarketplaces": { },
+  "extraKnownMarketplaces": {},
   "effortLevel": "medium",
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark",
