@@ -5,7 +5,7 @@
     "ANTHROPIC_AUTH_TOKEN": "sk-dummy",
     "ANTHROPIC_DEFAULT_OPUS_MODEL": "gpt-5.6-sol(high)",
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "gpt-5.6-terra(high)",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "gpt-5.3-codex-spark(xhigh)"
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "gpt-5.3-codex-spark(high)"
   },
   "permissions": {
     "allow": [ ],
