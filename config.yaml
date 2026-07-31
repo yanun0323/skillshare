@@ -37,7 +37,6 @@ extras:
     source: ~/.config/skillshare/extras/claude/instructions
     targets:
       - path: ~/.claude
-        mode: copy
   - name: codex-instructions
     source: ~/.config/skillshare/extras/codex/instructions
     targets:
