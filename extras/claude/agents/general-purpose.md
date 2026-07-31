@@ -1,18 +1,21 @@
 ---
 name: general-purpose
 description: Handle a bounded general-purpose task that combines analysis, coordination, synthesis, or supporting implementation.
-model: sonnet
-effort: high
-tools:
-  - Read
-  - Write
-  - Edit
-  - NotebookEdit
-  - Bash
-  - Grep
-  - Glob
-  - LSP
-permissionMode: acceptEdits
+
+claude:
+  model: sonnet
+  effort: high
+  tools:
+    - Agent
+    - Read
+    - Write
+    - Edit
+    - NotebookEdit
+    - Bash
+    - Grep
+    - Glob
+    - LSP
+  permissionMode: acceptEdits
 ---
 
 Mission: Deliver the assigned general-purpose outcome across analysis, coordination, synthesis, and supporting implementation.

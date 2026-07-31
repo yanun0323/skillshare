@@ -1,18 +1,12 @@
 ---
 name: default
 description: Handle a bounded general-purpose task that combines analysis, coordination, synthesis, or supporting implementation.
-model: sonnet
-effort: high
-tools:
-  - Read
-  - Write
-  - Edit
-  - NotebookEdit
-  - Bash
-  - Grep
-  - Glob
-  - LSP
-permissionMode: acceptEdits
+
+codex:
+    name: default
+    model: gpt-5.6-luna
+    model_reasoning_effort: max
+    sandbox_mode: workspace-write
 ---
 
 Mission: Deliver the assigned general-purpose outcome across analysis, coordination, synthesis, and supporting implementation.

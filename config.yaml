@@ -1,13 +1,14 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/runkids/skillshare/main/schemas/config.schema.json
+
 sources:
   skills: ~/.config/skillshare/skills
-  agents: ~/.config/skillshare/agents
 git_root: root
 mode: merge
 targets:
   claude:
     skills:
       path: ~/.claude/skills
+      exclude: [generate2d*]
   codex:
     skills:
       path: ~/.codex-cli/skills
@@ -15,48 +16,45 @@ targets:
     skills:
       path: ~/.pi/agent/skills
 extras:
-  - name: instructions
-    source: ~/.config/skillshare/extra/all/instructions
-    targets:
-      - path: ~/.codex-cli
-        mode: merge
-      - path: ~/.claude
-        mode: merge
-  - name: hooks
-    source: ~/.config/skillshare/extra/all/hook
-    targets:
-      - path: ~/.codex-cli/hooks
-        mode: merge
-      - path: ~/.claude/hooks
-        mode: merge
-  - name: claude-instructions
-    source: ~/.config/skillshare/extra/claude/instructions
-    targets:
-      - path: ~/.claude
-        mode: merge
-  - name: claude-agents
-    source: ~/.config/skillshare/extra/claude/agents
-    targets:
-      - path: ~/.claude/agents
-        mode: merge
-  - name: codex-instructions
-    source: ~/.config/skillshare/extra/codex/instructions
-    targets:
-      - path: ~/.codex-cli
-        mode: merge
-  - name: codex-agents
-    source: ~/.config/skillshare/extra/codex/agents
+  - name: agents
+    source: ~/.config/skillshare/extras/all/agents
     targets:
       - path: ~/.codex-cli/agents
-        mode: merge
-  - name: pi-prompts
-    source: ~/.config/skillshare/extra/pi/prompts
+        extension: codex-agents
+      - path: ~/.claude/agents
+        extension: claude-agents
+  - name: instructions
+    source: ~/.config/skillshare/extras/all/instructions
     targets:
-      - path: ~/.pi/agent/prompts
-        mode: merge
+      - path: ~/.codex-cli
+      - path: ~/.claude
+  - name: hooks
+    source: ~/.config/skillshare/extras/all/hooks
+    targets:
+      - path: ~/.codex-cli/hooks
+      - path: ~/.claude/hooks
+  - name: claude-instructions
+    source: ~/.config/skillshare/extras/claude/instructions
+    targets:
+      - path: ~/.claude
+  - name: codex-instructions
+    source: ~/.config/skillshare/extras/codex/instructions
+    targets:
+      - path: ~/.codex-cli
+  - name: claude-agents
+    source: ~/.config/skillshare/extras/claude/agents
+    targets:
+      - path: ~/.claude/agents
+        extension: claude-agents
+  - name: codex-agents
+    source: ~/.config/skillshare/extras/codex/agents
+    targets:
+      - path: ~/.codex-cli/agents
+        extension: codex-agents
 ignore:
-  - .DS_Store
-  - .git/
+  - '**/.DS_Store'
+  - '**/.git/**'
+  - '**/node_modules/**'
   - __pycache__/
 audit:
   block_threshold: CRITICAL
