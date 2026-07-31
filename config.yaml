@@ -15,23 +15,6 @@ targets:
     skills:
       path: ~/.pi/agent/skills
 extras:
-  - name: global-agents
-    source: ~/.config/skillshare/extras/all/agents
-    targets:
-      - path: ~/.codex-cli/agents
-        extension: codex-agents
-      - path: ~/.claude/agents
-        extension: claude-agents
-  - name: global-instructions
-    source: ~/.config/skillshare/extras/all/instructions
-    targets:
-      - path: ~/.codex-cli
-      - path: ~/.claude
-  - name: global-hooks
-    source: ~/.config/skillshare/extras/all/hooks
-    targets:
-      - path: ~/.codex-cli/hooks
-      - path: ~/.claude/hooks
   - name: claude-instructions
     source: ~/.config/skillshare/extras/claude/instructions
     targets:
@@ -50,6 +33,18 @@ extras:
     targets:
       - path: ~/.codex-cli/agents
         extension: codex-agents
+  - name: global-agents
+    source: ~/.config/skillshare/extras/all/agents
+    targets:
+      - path: ~/.codex-cli/agents
+        extension: codex-agents
+      - path: ~/.claude/agents
+        extension: claude-agents
+  - name: global-hooks
+    source: ~/.config/skillshare/extras/all/hooks
+    targets:
+      - path: ~/.codex-cli/hooks
+      - path: ~/.claude/hooks
 ignore:
   - '**/.DS_Store'
   - '**/.git/**'
