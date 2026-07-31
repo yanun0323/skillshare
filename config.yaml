@@ -1,5 +1,4 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/runkids/skillshare/main/schemas/config.schema.json
-
 sources:
   skills: ~/.config/skillshare/skills
 git_root: root
@@ -16,19 +15,19 @@ targets:
     skills:
       path: ~/.pi/agent/skills
 extras:
-  - name: agents
+  - name: global-agents
     source: ~/.config/skillshare/extras/all/agents
     targets:
       - path: ~/.codex-cli/agents
         extension: codex-agents
       - path: ~/.claude/agents
         extension: claude-agents
-  - name: instructions
+  - name: global-instructions
     source: ~/.config/skillshare/extras/all/instructions
     targets:
       - path: ~/.codex-cli
       - path: ~/.claude
-  - name: hooks
+  - name: global-hooks
     source: ~/.config/skillshare/extras/all/hooks
     targets:
       - path: ~/.codex-cli/hooks
@@ -57,4 +56,4 @@ ignore:
   - '**/node_modules/**'
   - __pycache__/
 audit:
-  block_threshold: CRITICAL
+  block_threshold: INFO
