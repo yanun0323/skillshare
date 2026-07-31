@@ -1,0 +1,3 @@
+run: ['node', 'convert.js']
+output_ext: md
+description: 'Markdown subagent (template style) → Codex CLI TOML agent'
