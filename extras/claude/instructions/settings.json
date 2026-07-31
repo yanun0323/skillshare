@@ -12,7 +12,7 @@
     "CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH": "2"
   },
   "permissions": {
-    "allow": [ ],
+    "allow": [],
     "defaultMode": "bypassPermissions"
   },
   "model": "opus",
@@ -40,7 +40,7 @@
     "typescript-lsp@claude-plugins-official": true,
     "rust-analyzer-lsp@claude-plugins-official": true
   },
-  "extraKnownMarketplaces": { },
+  "extraKnownMarketplaces": {},
   "effortLevel": "xhigh",
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark",
