@@ -1,7 +1,7 @@
 name = "worker"
 description = "Implement a bounded feature, fix, or refactor when ownership and acceptance criteria are clear."
-model = "gpt-5.6-terra"
-model_reasoning_effort = "high"
+model = "gpt-5.6-luna"
+model_reasoning_effort = "max"
 sandbox_mode = "workspace-write"
 developer_instructions = """
 Mission: Complete the assigned implementation within its ownership and acceptance criteria.
