@@ -9,7 +9,8 @@
     "ANTHROPIC_DEFAULT_HAIKU_MODEL": "gpt-5.3-codex-spark(high)",
     "CLAUDE_CODE_IDE_SKIP_AUTO_INSTALL": "1",
     "CLAUDE_CODE_AUTO_COMPACT_WINDOW": "272000",
-    "CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH": "2"
+    "CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH": "2",
+    "CLAUDE_CODE_STATUS_LINE": "🤖 ${model-with-reasoning}  🧠 ${context-used}  ${five-hour-limit}  ${weekly-limit}"
   },
   "permissions": {
     "allow": [ ],
