@@ -93,6 +93,15 @@ timeout = 30
 type = "command"
 statusMessage = "Routing noisy Bash command through RTK"
 
+[[hooks.PreToolUse]]
+matcher = "^Agent$"
+
+[[hooks.PreToolUse.hooks]]
+command = 'python3 "${CODEX_HOME:-$HOME/.codex}/hooks/subagent_routing_pre_tool_use.py"'
+timeout = 30
+type = "command"
+statusMessage = "Routing subagent through configured Codex agent"
+
 [apps.connector_76869538009648d5b282a4bb21c3d157]
 enabled = false
 
