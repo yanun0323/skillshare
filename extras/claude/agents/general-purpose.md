@@ -4,7 +4,7 @@ description: Handle a bounded general-purpose task that combines analysis, coord
 
 claude:
   model: sonnet
-  effort: high
+  effort: max
   tools:
     - Agent
     - Read

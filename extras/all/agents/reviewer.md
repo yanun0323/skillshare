@@ -4,7 +4,7 @@ description: Review a bounded change for correctness, security, behavior regress
 
 claude:
   model: sonnet
-  effort: high
+  effort: max
   tools:
     - Read
     - Bash
