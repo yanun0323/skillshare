@@ -10,7 +10,7 @@
     "CLAUDE_CODE_IDE_SKIP_AUTO_INSTALL": "1",
     "CLAUDE_CODE_AUTO_COMPACT_WINDOW": "272000",
     "CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH": "2",
-    "CLAUDE_CODE_STATUS_LINE": "${model-with-reasoning} ${context-used} [Codex] ${codex-five-hour-limit} ${codex-weekly-limit}"
+    "CLAUDE_CODE_STATUS_LINE": "${provider} · ${model} · ${context-used} · ${codex-five-hour-limit} · ${codex-weekly-limit} · ${codex-five-hour-reset} · ${codex-weekly-reset}"
   },
   "permissions": {
     "allow": [ ],
