@@ -3,6 +3,7 @@
 
 import hashlib
 import json
+import math
 import os
 import re
 import select
@@ -10,13 +11,11 @@ import shutil
 import subprocess
 import sys
 import time
-from datetime import datetime
 from pathlib import Path
-
+from urllib.parse import urlparse
 
 DEFAULT_FORMAT = (
-    "${model-with-reasoning} · ${context-used} · "
-    "${five-hour-limit} · ${weekly-limit}"
+    "${model-with-reasoning} · ${context-used} · ${five-hour-limit} · ${weekly-limit}"
 )
 PLACEHOLDER = re.compile(r"\$\{([^{}]+)\}")
 CODEX_LIMIT_CACHE_TTL_SECONDS = 60
@@ -44,6 +43,9 @@ ANSI_STYLES = {
     "bright-white": "97",
 }
 DEFAULT_FIELD_STYLES = {
+    "model": ("bright-cyan",),
+    "reasoning": ("bright-cyan",),
+    "provider": ("bright-blue",),
     "model-with-reasoning": ("bright-cyan",),
     "context-used": ("yellow",),
     "five-hour-limit": ("green",),
@@ -52,6 +54,19 @@ DEFAULT_FIELD_STYLES = {
     "codex-weekly-limit": ("bright-magenta",),
     "codex-five-hour-reset": ("gray",),
     "codex-weekly-reset": ("gray",),
+}
+DEFAULT_FIELD_VALUES = {
+    "model": "unknown-model",
+    "reasoning": "–",
+    "provider": "unknown",
+    "model-with-reasoning": "unknown-model",
+    "context-used": "Context 0% used",
+    "five-hour-limit": "5h 0% left",
+    "weekly-limit": "Weekly 0% left",
+    "codex-five-hour-limit": "5h 0% left",
+    "codex-weekly-limit": "Weekly 0% left",
+    "codex-five-hour-reset": "5h reset unknown",
+    "codex-weekly-reset": "Weekly reset unknown",
 }
 
 
@@ -78,6 +93,26 @@ def configured_format():
     """Read the formatter template, falling back to the default layout."""
     value = os.environ.get("CLAUDE_CODE_STATUS_LINE")
     return value if value is not None else DEFAULT_FORMAT
+
+
+def provider_from_base_url():
+    """Return the provider domain configured for Anthropic requests."""
+    base_url = os.environ.get("ANTHROPIC_BASE_URL")
+    if not base_url:
+        return None
+
+    normalized_url = base_url.strip()
+    if "://" not in normalized_url:
+        normalized_url = f"//{normalized_url}"
+    try:
+        domain = urlparse(normalized_url).hostname
+    except ValueError:
+        return None
+    if not domain:
+        return None
+
+    domain = domain.lower()
+    return "local" if domain in {"localhost", "127.0.0.1"} else domain
 
 
 def ansi_code(style):
@@ -110,7 +145,10 @@ def format_status(template, values):
         if name not in values:
             return match.group(0)
         selected_styles = styles or DEFAULT_FIELD_STYLES.get(name, ())
-        return apply_styles(values[name] or "-", selected_styles)
+        value = values[name]
+        if value is None or value == "":
+            value = DEFAULT_FIELD_VALUES.get(name, "-")
+        return apply_styles(str(value), selected_styles)
 
     return PLACEHOLDER.sub(replace, template)
 
@@ -124,9 +162,7 @@ def codex_home():
 
 def codex_limit_cache_path():
     """Keep non-secret rate-limit snapshots separate for each CODEX_HOME."""
-    cache_root = Path(
-        os.environ.get("XDG_CACHE_HOME", str(Path.home() / ".cache"))
-    )
+    cache_root = Path(os.environ.get("XDG_CACHE_HOME", str(Path.home() / ".cache")))
     identity = hashlib.sha256(str(codex_home()).encode("utf-8")).hexdigest()[:16]
     return cache_root / "claude-code-statusline" / f"codex-limits-{identity}.json"
 
@@ -230,9 +266,7 @@ def fetch_codex_limits():
             return None
 
         send_app_server_message(process, {"method": "initialized", "params": {}})
-        send_app_server_message(
-            process, {"method": "account/rateLimits/read", "id": 2}
-        )
+        send_app_server_message(process, {"method": "account/rateLimits/read", "id": 2})
         response = read_app_server_response(
             process, 2, CODEX_LIMIT_QUERY_TIMEOUT_SECONDS
         )
@@ -282,9 +316,7 @@ def refresh_codex_limit_cache():
             if time.time() - lock_path.stat().st_mtime <= 30:
                 return
             lock_path.unlink()
-            lock_fd = os.open(
-                lock_path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600
-            )
+            lock_fd = os.open(lock_path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
         except (FileNotFoundError, FileExistsError, OSError):
             return
 
@@ -314,16 +346,22 @@ def format_limit_reset(window, label):
     if not isinstance(window, dict):
         return None
     try:
-        reset = datetime.fromtimestamp(float(window["resetsAt"])).astimezone()
-    except (KeyError, OSError, OverflowError, TypeError, ValueError):
+        remaining_minutes = max(
+            0, math.ceil((float(window["resetsAt"]) - time.time()) / 60)
+        )
+    except (KeyError, OverflowError, TypeError, ValueError):
         return None
-    now = datetime.now().astimezone()
-    formatted = (
-        reset.strftime("%H:%M")
-        if reset.date() == now.date()
-        else reset.strftime("%m/%d %H:%M")
-    )
-    return f"{label} resets {formatted}"
+
+    days, remaining_minutes = divmod(remaining_minutes, 24 * 60)
+    hours, minutes = divmod(remaining_minutes, 60)
+    parts = []
+    if days:
+        parts.append(f"{days}d")
+    if hours:
+        parts.append(f"{hours}h")
+    if minutes or not parts:
+        parts.append(f"{minutes}m")
+    return f"{label} reset in {''.join(parts)}"
 
 
 def classify_codex_limit_windows(rate_limits):
@@ -374,22 +412,20 @@ def main():
     model = nested(data, "model", "display_name") or nested(data, "model", "id")
     effort = nested(data, "effort", "level")
     thinking = nested(data, "thinking", "enabled")
-    if model:
-        if effort:
-            model = f"{model} {effort}"
-        elif thinking:
-            model = f"{model} thinking"
+    reasoning = effort or ("thinking" if thinking else None)
+    model_with_reasoning = model
+    if model and reasoning:
+        model_with_reasoning = f"{model} {reasoning}"
 
     context_used = percentage(nested(data, "context_window", "used_percentage"))
-    five_hour = percentage(
-        nested(data, "rate_limits", "five_hour", "used_percentage")
-    )
-    weekly = percentage(
-        nested(data, "rate_limits", "seven_day", "used_percentage")
-    )
+    five_hour = percentage(nested(data, "rate_limits", "five_hour", "used_percentage"))
+    weekly = percentage(nested(data, "rate_limits", "seven_day", "used_percentage"))
 
     values = {
-        "model-with-reasoning": model,
+        "model": model,
+        "reasoning": reasoning,
+        "provider": provider_from_base_url(),
+        "model-with-reasoning": model_with_reasoning,
         "context-used": f"Context {context_used} used" if context_used else None,
         "five-hour-limit": f"5h {five_hour}" if five_hour else None,
         "weekly-limit": f"Weekly {weekly}" if weekly else None,
