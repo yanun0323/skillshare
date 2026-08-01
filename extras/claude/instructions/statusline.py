@@ -110,7 +110,7 @@ def format_status(template, values):
         if name not in values:
             return match.group(0)
         selected_styles = styles or DEFAULT_FIELD_STYLES.get(name, ())
-        return apply_styles(values[name] or "", selected_styles)
+        return apply_styles(values[name] or "-", selected_styles)
 
     return PLACEHOLDER.sub(replace, template)
 
