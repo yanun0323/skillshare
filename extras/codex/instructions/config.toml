@@ -19,7 +19,7 @@ browser_use = false
 browser_use_external = false
 computer_use = false
 fast_mode = true
-multi_agent = true
+multi_agent = false
 hooks = true
 in_app_browser = false
 memories = false
@@ -32,6 +32,9 @@ tool_suggest = false
 js_repl = false
 enable_mcp_apps = false
 sqlite = false
+
+[features.multi_agent_v2]
+
 
 [memories]
 generate_memories = false
