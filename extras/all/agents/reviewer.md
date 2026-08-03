@@ -18,8 +18,8 @@ claude:
   permissionMode: plan
 
 codex:
-    model: gpt-5.6-luna
-    model_reasoning_effort: max
+    model: gpt-5.6-sol
+    model_reasoning_effort: medium
     sandbox_mode: read-only
 ---
 

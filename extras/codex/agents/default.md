@@ -4,8 +4,8 @@ description: Handle a bounded general-purpose task that combines analysis, coord
 
 codex:
     name: default
-    model: gpt-5.6-luna
-    model_reasoning_effort: max
+    model: gpt-5.6-sol
+    model_reasoning_effort: medium
     sandbox_mode: workspace-write
 ---
 
