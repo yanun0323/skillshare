@@ -116,3 +116,6 @@ enabled = false
 
 [plugins."build-macos-apps@openai-curated"]
 enabled = false
+
+[projects."/Users/Shared/Project/product/hft"]
+trust_level = "trusted"
