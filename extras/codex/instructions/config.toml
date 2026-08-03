@@ -12,7 +12,7 @@ approval_policy = "never"
 sandbox_mode = "danger-full-access"
 approvals_reviewer = "auto_review"
 service_tier = "fast"
-# suppress_unstable_features_warning = true
+suppress_unstable_features_warning = false
 
 [features]
 apps = false
@@ -29,9 +29,7 @@ multi_agent_mode = true
 hooks = true
 in_app_browser = false
 image_generation = true
-imagegenext = true
 memories = false
-memory_tool = false
 plugin_sharing = false
 plugins = false
 remote_compaction_v2 = false
