@@ -3,9 +3,9 @@
   "env": {
     "ANTHROPIC_BASE_URL": "http://127.0.0.1:8317",
     "ANTHROPIC_AUTH_TOKEN": "sk-dummy",
-    "ANTHROPIC_DEFAULT_FABLE_MODEL": "gpt-5.6-sol(high)",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "gpt-5.6-sol(medium)",
-    "ANTHROPIC_DEFAULT_SONNET_MODEL": "gpt-5.6-luna(max)",
+    "ANTHROPIC_DEFAULT_FABLE_MODEL": "gpt-5.6-sol-fast(xhigh)",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "gpt-5.6-sol-fast(high)",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "gpt-5.6-sol-fast(medium)",
     "ANTHROPIC_DEFAULT_HAIKU_MODEL": "gpt-5.3-codex-spark(high)",
     "CLAUDE_CODE_IDE_SKIP_AUTO_INSTALL": "1",
     "CLAUDE_CODE_AUTO_COMPACT_WINDOW": "272000",
@@ -16,8 +16,7 @@
     "allow": [ ],
     "defaultMode": "bypassPermissions"
   },
-  "model": "fable",
-  "effortLevel": "max",
+  "model": "opus",
   "hooks": {
     "PreToolUse": [
       {
@@ -36,6 +35,11 @@
   "worktree": {
     "baseRef": "fresh"
   },
+  "statusLine": {
+    "type": "command",
+    "command": "python3 ~/.claude/statusline.py",
+    "padding": 0
+  },
   "enabledPlugins": {
     "gopls-lsp@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
@@ -46,10 +50,5 @@
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark",
   "editorMode": "normal",
-  "preferredNotifChannel": "notifications_disabled",
-  "statusLine": {
-    "type": "command",
-    "command": "python3 ~/.claude/statusline.py",
-    "padding": 0
-  }
+  "preferredNotifChannel": "notifications_disabled"
 }
