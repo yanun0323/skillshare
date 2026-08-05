@@ -314,6 +314,78 @@
         "agents/openai.yaml": "sha256:c8cb20f68ebf0edb4e497bc11ae5fcaa196004e661cd189015b04f4109ced7f1"
       }
     },
+    "ponytail": {
+      "source": "github.com/dietrichgebert/ponytail/skills/ponytail",
+      "type": "github-subdir",
+      "installed_at": "2026-08-05T10:36:31.002429+08:00",
+      "repo_url": "https://github.com/dietrichgebert/ponytail.git",
+      "subdir": "skills/ponytail",
+      "version": "16f2980",
+      "tree_hash": "cb6e53477eaf04e6daeca22feacb85f9ce20d40c",
+      "file_hashes": {
+        "SKILL.md": "sha256:1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2"
+      }
+    },
+    "ponytail-audit": {
+      "source": "github.com/dietrichgebert/ponytail/skills/ponytail-audit",
+      "type": "github-subdir",
+      "installed_at": "2026-08-05T10:36:31.016177+08:00",
+      "repo_url": "https://github.com/dietrichgebert/ponytail.git",
+      "subdir": "skills/ponytail-audit",
+      "version": "16f2980",
+      "tree_hash": "19744a9490abb0f5d0f18c6e39e3a3eb50f4daa1",
+      "file_hashes": {
+        "SKILL.md": "sha256:5560b8e383dbe2ddfddc873a1e2bf2e586e23e0cd7d995537482b2315331f6d1"
+      }
+    },
+    "ponytail-debt": {
+      "source": "github.com/dietrichgebert/ponytail/skills/ponytail-debt",
+      "type": "github-subdir",
+      "installed_at": "2026-08-05T10:36:31.039457+08:00",
+      "repo_url": "https://github.com/dietrichgebert/ponytail.git",
+      "subdir": "skills/ponytail-debt",
+      "version": "16f2980",
+      "tree_hash": "fe9ea82cad2b42a9c244acc275c9091c414ff528",
+      "file_hashes": {
+        "SKILL.md": "sha256:c84fba75f0ca12bfe83f9a78ea02fd125c5dd3f1fbb18124105a489937f284e6"
+      }
+    },
+    "ponytail-gain": {
+      "source": "github.com/dietrichgebert/ponytail/skills/ponytail-gain",
+      "type": "github-subdir",
+      "installed_at": "2026-08-05T10:36:31.056682+08:00",
+      "repo_url": "https://github.com/dietrichgebert/ponytail.git",
+      "subdir": "skills/ponytail-gain",
+      "version": "16f2980",
+      "tree_hash": "13724e1903f76456164f00ec2a3074848433588f",
+      "file_hashes": {
+        "SKILL.md": "sha256:24e01d1c9715cb136ba1c4f1e52a95940c0193558b876828e537736480d6408b"
+      }
+    },
+    "ponytail-help": {
+      "source": "github.com/dietrichgebert/ponytail/skills/ponytail-help",
+      "type": "github-subdir",
+      "installed_at": "2026-08-05T10:36:31.074738+08:00",
+      "repo_url": "https://github.com/dietrichgebert/ponytail.git",
+      "subdir": "skills/ponytail-help",
+      "version": "16f2980",
+      "tree_hash": "b7df7bc32b6e4e8bbde8acb2ef3c97ee7e7638f7",
+      "file_hashes": {
+        "SKILL.md": "sha256:2264d1615117b02b0fd5a69ec84cd2757006471a78e4d6c22eed6d581c1d37a4"
+      }
+    },
+    "ponytail-review": {
+      "source": "github.com/dietrichgebert/ponytail/skills/ponytail-review",
+      "type": "github-subdir",
+      "installed_at": "2026-08-05T10:36:31.089625+08:00",
+      "repo_url": "https://github.com/dietrichgebert/ponytail.git",
+      "subdir": "skills/ponytail-review",
+      "version": "16f2980",
+      "tree_hash": "dc6d9660c4297496a9220de377f6f7df38ab1a53",
+      "file_hashes": {
+        "SKILL.md": "sha256:40df33b58fc6ef889b93585733feb9566b76e9586efa7f376785c1e995197ac0"
+      }
+    },
     "prototype": {
       "source": "https://github.com/mattpocock/skills.git/skills/engineering/prototype",
       "type": "github-subdir",

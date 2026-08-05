@@ -112,3 +112,8 @@ enabled = false
 
 [plugins."build-macos-apps@openai-curated"]
 enabled = false
+
+[marketplaces.ponytail]
+last_updated = "2026-08-05T02:34:45Z"
+source_type = "git"
+source = "https://github.com/DietrichGebert/ponytail.git"
