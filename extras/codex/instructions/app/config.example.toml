@@ -1,0 +1,1201 @@
+#:schema https://raw.githubusercontent.com/openai/codex/refs/heads/main/codex-rs/core/config.schema.json
+#
+# Complete Codex config key/default catalog generated from the official JSON Schema.
+# Source commit (main at generation time): 1b594980f3eb6998554097eed87e98a3ecb7ebfb
+# Schema SHA-256: de1b6cb3f389daec567a3d1153dda6a92f3471da1f96bf5f0ae184bfe3dc0228
+# Top-level keys: 93
+# Expanded key paths: 1000
+# Paths with schema defaults: 210 (including 107 null/unset defaults)
+# Paths without schema defaults: 790
+#
+# Every entry is commented so this reference file does not override Codex behavior.
+# <not declared by schema> means the JSON Schema has no `default` for that path.
+# <null / unset> means the schema default is JSON null; TOML has no null literal.
+# [] marks an array-of-table item; "<name>" marks a dynamic user-defined key.
+# Object defaults use TOML-like inline-table notation inside comments.
+
+# --- agents ---
+# agents = <not declared by schema>
+# agents.default_subagent_model = <not declared by schema>
+# agents.default_subagent_reasoning_effort = <not declared by schema>
+# agents.enabled = <not declared by schema>
+# agents.interrupt_message = <not declared by schema>
+# agents.max_concurrent_threads_per_session = <not declared by schema>
+# agents.max_depth = <not declared by schema>
+# agents."<name>" = <not declared by schema>
+# agents."<name>".config_file = <not declared by schema>
+# agents."<name>".description = <not declared by schema>
+# agents."<name>".nickname_candidates = <not declared by schema>
+
+# --- allow_login_shell ---
+# allow_login_shell = <not declared by schema>
+
+# --- analytics ---
+# analytics = <not declared by schema>
+# analytics.enabled = <not declared by schema>
+
+# --- approval_policy ---
+# approval_policy = <not declared by schema>
+# approval_policy.granular = <not declared by schema>
+# approval_policy.granular.mcp_elicitations = <not declared by schema>
+# approval_policy.granular.request_permissions = false
+# approval_policy.granular.rules = <not declared by schema>
+# approval_policy.granular.sandbox_approval = <not declared by schema>
+# approval_policy.granular.skill_approval = false
+
+# --- approvals_reviewer ---
+# approvals_reviewer = <not declared by schema>
+
+# --- apps ---
+# apps = <null / unset>
+# apps._default = <not declared by schema>
+# apps._default.approvals_reviewer = <not declared by schema>
+# apps._default.default_tools_approval_mode = <not declared by schema>
+# apps._default.destructive_enabled = <not declared by schema>
+# apps._default.enabled = true
+# apps._default.open_world_enabled = <not declared by schema>
+# apps."<name>" = <not declared by schema>
+# apps."<name>".approvals_reviewer = <not declared by schema>
+# apps."<name>".default_tools_approval_mode = <not declared by schema>
+# apps."<name>".default_tools_enabled = <not declared by schema>
+# apps."<name>".destructive_enabled = <not declared by schema>
+# apps."<name>".enabled = true
+# apps."<name>".open_world_enabled = <not declared by schema>
+# apps."<name>".tools = <not declared by schema>
+# apps."<name>".tools."<name>" = <not declared by schema>
+# apps."<name>".tools."<name>".approval_mode = <not declared by schema>
+# apps."<name>".tools."<name>".enabled = <not declared by schema>
+
+# --- apps_mcp_product_sku ---
+# apps_mcp_product_sku = <not declared by schema>
+
+# --- audio ---
+# audio = <null / unset>
+# audio.microphone = <not declared by schema>
+# audio.speaker = <not declared by schema>
+
+# --- auto_review ---
+# auto_review = <null / unset>
+# auto_review.policy = <not declared by schema>
+
+# --- background_terminal_max_timeout ---
+# background_terminal_max_timeout = <not declared by schema>
+
+# --- chatgpt_base_url ---
+# chatgpt_base_url = <not declared by schema>
+
+# --- check_for_update_on_startup ---
+# check_for_update_on_startup = <not declared by schema>
+
+# --- cli_auth_credentials_store ---
+# cli_auth_credentials_store = <null / unset>
+
+# --- compact_prompt ---
+# compact_prompt = <not declared by schema>
+
+# --- debug ---
+# debug = <not declared by schema>
+# debug.config_lockfile = <not declared by schema>
+# debug.config_lockfile.allow_codex_version_mismatch = <not declared by schema>
+# debug.config_lockfile.export_dir = <not declared by schema>
+# debug.config_lockfile.load_path = <not declared by schema>
+# debug.config_lockfile.save_fields_resolved_from_model_catalog = <not declared by schema>
+
+# --- default_permissions ---
+# default_permissions = <not declared by schema>
+
+# --- desktop ---
+# desktop = <null / unset>
+
+# --- developer_instructions ---
+# developer_instructions = <null / unset>
+
+# --- disable_paste_burst ---
+# disable_paste_burst = <not declared by schema>
+
+# --- experimental_compact_prompt_file ---
+# experimental_compact_prompt_file = <not declared by schema>
+
+# --- experimental_realtime_start_instructions ---
+# experimental_realtime_start_instructions = <not declared by schema>
+
+# --- experimental_realtime_webrtc_call_base_url ---
+# experimental_realtime_webrtc_call_base_url = <not declared by schema>
+
+# --- experimental_realtime_ws_backend_prompt ---
+# experimental_realtime_ws_backend_prompt = <not declared by schema>
+
+# --- experimental_realtime_ws_base_url ---
+# experimental_realtime_ws_base_url = <not declared by schema>
+
+# --- experimental_realtime_ws_model ---
+# experimental_realtime_ws_model = <not declared by schema>
+
+# --- experimental_realtime_ws_startup_context ---
+# experimental_realtime_ws_startup_context = <not declared by schema>
+
+# --- experimental_thread_config_endpoint ---
+# experimental_thread_config_endpoint = <not declared by schema>
+
+# --- experimental_thread_store ---
+# experimental_thread_store = <not declared by schema>
+# experimental_thread_store.type = <not declared by schema>
+
+# --- experimental_use_unified_exec_tool ---
+# experimental_use_unified_exec_tool = <not declared by schema>
+
+# --- features ---
+# features = <null / unset>
+# features.apply_patch_freeform = <not declared by schema>
+# features.apply_patch_streaming_events = <not declared by schema>
+# features.apps = <not declared by schema>
+# features.apps_mcp_path_override = <not declared by schema>
+# features.apps_mcp_path_override.enabled = <not declared by schema>
+# features.apps_mcp_path_override.path = <not declared by schema>
+# features.auth_elicitation = <not declared by schema>
+# features.browser_use = <not declared by schema>
+# features.browser_use_external = <not declared by schema>
+# features.browser_use_full_cdp_access = <not declared by schema>
+# features.chronicle = <not declared by schema>
+# features.code_mode = <not declared by schema>
+# features.code_mode.direct_only_tool_namespaces = <not declared by schema>
+# features.code_mode.enabled = <not declared by schema>
+# features.code_mode.excluded_tool_namespaces = <not declared by schema>
+# features.code_mode_buffered_exec = <not declared by schema>
+# features.code_mode_host = <not declared by schema>
+# features.code_mode_host.disable_in_process_fallback = <not declared by schema>
+# features.code_mode_host.enabled = <not declared by schema>
+# features.code_mode_only = <not declared by schema>
+# features.codex_git_commit = <not declared by schema>
+# features.codex_hooks = <not declared by schema>
+# features.collab = <not declared by schema>
+# features.collaboration_modes = <not declared by schema>
+# features.computer_use = <not declared by schema>
+# features.concurrent_reasoning_summaries = <not declared by schema>
+# features.connectors = <not declared by schema>
+# features.current_time_reminder = <not declared by schema>
+# features.current_time_reminder.clock_source = <not declared by schema>
+# features.current_time_reminder.delivery_mode = <not declared by schema>
+# features.current_time_reminder.enabled = <not declared by schema>
+# features.current_time_reminder.reminder_interval_seconds = <not declared by schema>
+# features.current_time_reminder.sleep_tool = <not declared by schema>
+# features.default_mode_request_user_input = <not declared by schema>
+# features.deferred_executor = <not declared by schema>
+# features.deferred_tool_world_state = <not declared by schema>
+# features.elevated_windows_sandbox = <not declared by schema>
+# features.enable_experimental_windows_sandbox = <not declared by schema>
+# features.enable_fanout = <not declared by schema>
+# features.enable_mcp_apps = <not declared by schema>
+# features.enable_request_compression = <not declared by schema>
+# features.exec_permission_approvals = <not declared by schema>
+# features.executed_tool_call_metadata = <not declared by schema>
+# features.executor_capability_discovery = <not declared by schema>
+# features.experimental_use_unified_exec_tool = <not declared by schema>
+# features.experimental_windows_sandbox = <not declared by schema>
+# features.external_agent_memory_import = <not declared by schema>
+# features.external_migration = <not declared by schema>
+# features.fast_mode = <not declared by schema>
+# features.goals = <not declared by schema>
+# features.guardian_approval = <not declared by schema>
+# features.guardianv2 = <not declared by schema>
+# features.hooks = <not declared by schema>
+# features.image_detail_original = <not declared by schema>
+# features.image_generation = <not declared by schema>
+# features.imagegenext = <not declared by schema>
+# features.in_app_browser = <not declared by schema>
+# features.in_app_updates = <not declared by schema>
+# features.item_ids = <not declared by schema>
+# features.js_repl = <not declared by schema>
+# features.js_repl_tools_only = <not declared by schema>
+# features.local_thread_store_compression = <not declared by schema>
+# features.mcp_2026_07_28 = <not declared by schema>
+# features.memories = <not declared by schema>
+# features.memory_tool = <not declared by schema>
+# features.mentions_v2 = <not declared by schema>
+# features.multi_agent = <not declared by schema>
+# features.multi_agent_mode = <not declared by schema>
+# features.multi_agent_v2 = <not declared by schema>
+# features.multi_agent_v2.default_wait_timeout_ms = <not declared by schema>
+# features.multi_agent_v2.enabled = <not declared by schema>
+# features.multi_agent_v2.expose_spawn_agent_model_overrides = <not declared by schema>
+# features.multi_agent_v2.hide_spawn_agent_metadata = <not declared by schema>
+# features.multi_agent_v2.max_concurrent_threads_per_session = <not declared by schema>
+# features.multi_agent_v2.max_wait_timeout_ms = <not declared by schema>
+# features.multi_agent_v2.min_wait_timeout_ms = <not declared by schema>
+# features.multi_agent_v2.multi_agent_mode_hint_text = <not declared by schema>
+# features.multi_agent_v2.non_code_mode_only = <not declared by schema>
+# features.multi_agent_v2.root_agent_usage_hint_text = <not declared by schema>
+# features.multi_agent_v2.subagent_developer_instructions = <not declared by schema>
+# features.multi_agent_v2.subagent_usage_hint_text = <not declared by schema>
+# features.multi_agent_v2.tool_namespace = <not declared by schema>
+# features.multi_agent_v2.usage_hint_enabled = <not declared by schema>
+# features.multi_agent_v2.usage_hint_text = <not declared by schema>
+# features.multi_agent_v2.wait_agent_enabled = <not declared by schema>
+# features.network_proxy = <not declared by schema>
+# features.network_proxy.allow_local_binding = <not declared by schema>
+# features.network_proxy.allow_upstream_proxy = <not declared by schema>
+# features.network_proxy.dangerously_allow_all_unix_sockets = <not declared by schema>
+# features.network_proxy.dangerously_allow_non_loopback_proxy = <not declared by schema>
+# features.network_proxy.domains = <not declared by schema>
+# features.network_proxy.domains."<name>" = <not declared by schema>
+# features.network_proxy.enable_socks5 = <not declared by schema>
+# features.network_proxy.enable_socks5_udp = <not declared by schema>
+# features.network_proxy.enabled = <not declared by schema>
+# features.network_proxy.mode = <not declared by schema>
+# features.network_proxy.proxy_url = <not declared by schema>
+# features.network_proxy.socks_url = <not declared by schema>
+# features.network_proxy.unix_sockets = <not declared by schema>
+# features.network_proxy.unix_sockets."<name>" = <not declared by schema>
+# features.non_prefixed_mcp_tool_names = <not declared by schema>
+# features.non_prefixed_mcp_tool_names.enabled = <not declared by schema>
+# features.non_prefixed_mcp_tool_names.server_names = <not declared by schema>
+# features.personality = <not declared by schema>
+# features.plugin_hooks = <not declared by schema>
+# features.plugin_sharing = <not declared by schema>
+# features.plugins = <not declared by schema>
+# features.prevent_idle_sleep = <not declared by schema>
+# features.realtime_conversation = <not declared by schema>
+# features.recommended_plugins = <not declared by schema>
+# features.remote_compaction_v2 = <not declared by schema>
+# features.remote_control = <not declared by schema>
+# features.remote_models = <not declared by schema>
+# features.remote_plugin = <not declared by schema>
+# features.request_permissions = <not declared by schema>
+# features.request_permissions_tool = <not declared by schema>
+# features.request_rule = <not declared by schema>
+# features.resize_all_images = <not declared by schema>
+# features.respect_system_proxy = <not declared by schema>
+# features.responses_websockets = <not declared by schema>
+# features.responses_websockets_v2 = <not declared by schema>
+# features.rollout_budget = <not declared by schema>
+# features.rollout_budget.enabled = <not declared by schema>
+# features.rollout_budget.limit_tokens = <not declared by schema>
+# features.rollout_budget.prefill_token_weight = <not declared by schema>
+# features.rollout_budget.reminder_at_remaining_tokens = <not declared by schema>
+# features.rollout_budget.sampling_token_weight = <not declared by schema>
+# features.runtime_metrics = <not declared by schema>
+# features.search_tool = <not declared by schema>
+# features.secret_auth_storage = <not declared by schema>
+# features.shell_snapshot = <not declared by schema>
+# features.shell_tool = <not declared by schema>
+# features.shell_zsh_fork = <not declared by schema>
+# features.skill_env_var_dependency_prompt = <not declared by schema>
+# features.skill_mcp_dependency_install = <not declared by schema>
+# features.skill_search = <not declared by schema>
+# features.sqlite = <not declared by schema>
+# features.standalone_web_search = <not declared by schema>
+# features.steer = <not declared by schema>
+# features.telepathy = <not declared by schema>
+# features.terminal_resize_reflow = <not declared by schema>
+# features.terminal_visualization_instructions = <not declared by schema>
+# features.token_budget = <not declared by schema>
+# features.token_budget.auto_compact_fallback_buffer_tokens = <not declared by schema>
+# features.token_budget.auto_compact_fallback_prompt = <not declared by schema>
+# features.token_budget.enabled = <not declared by schema>
+# features.token_budget.guidance_message = <not declared by schema>
+# features.token_budget.reminder_message_template = <not declared by schema>
+# features.token_budget.reminder_threshold_tokens = <not declared by schema>
+# features.tool_call_mcp_elicitation = <not declared by schema>
+# features.tool_search = <not declared by schema>
+# features.tool_search_always_defer_mcp_tools = <not declared by schema>
+# features.tool_suggest = <not declared by schema>
+# features.tui_app_server = <not declared by schema>
+# features.unavailable_dummy_tools = <not declared by schema>
+# features.undo = <not declared by schema>
+# features.unified_exec = <not declared by schema>
+# features.unified_exec_zsh_fork = <not declared by schema>
+# features.use_agent_identity = <not declared by schema>
+# features.use_legacy_landlock = <not declared by schema>
+# features.use_linux_sandbox_bwrap = <not declared by schema>
+# features.web_search = <not declared by schema>
+# features.web_search_cached = <not declared by schema>
+# features.web_search_request = <not declared by schema>
+# features.workspace_dependencies = <not declared by schema>
+# features.workspace_owner_usage_nudge = <not declared by schema>
+
+# --- feedback ---
+# feedback = <not declared by schema>
+# feedback.enabled = <not declared by schema>
+
+# --- file_opener ---
+# file_opener = <not declared by schema>
+
+# --- forced_chatgpt_workspace_id ---
+# forced_chatgpt_workspace_id = <null / unset>
+
+# --- forced_login_method ---
+# forced_login_method = <null / unset>
+
+# --- ghost_snapshot ---
+# ghost_snapshot = <null / unset>
+# ghost_snapshot.disable_warnings = <not declared by schema>
+# ghost_snapshot.ignore_large_untracked_dirs = <not declared by schema>
+# ghost_snapshot.ignore_large_untracked_files = <not declared by schema>
+
+# --- hide_agent_reasoning ---
+# hide_agent_reasoning = false
+
+# --- history ---
+# history = { max_bytes = <null / unset>, persistence = "save-all" }
+# history.max_bytes = <null / unset>
+# history.persistence = "save-all"
+
+# --- hooks ---
+# hooks = <not declared by schema>
+# hooks.PermissionRequest = []
+# hooks.PermissionRequest[].hooks = []
+# hooks.PermissionRequest[].hooks[].additionalContextLimit = <not declared by schema>
+# hooks.PermissionRequest[].hooks[].async = false
+# hooks.PermissionRequest[].hooks[].command = <not declared by schema>
+# hooks.PermissionRequest[].hooks[].commandWindows = <null / unset>
+# hooks.PermissionRequest[].hooks[].statusMessage = <null / unset>
+# hooks.PermissionRequest[].hooks[].timeout = <null / unset>
+# hooks.PermissionRequest[].hooks[].type = <not declared by schema>
+# hooks.PermissionRequest[].matcher = <null / unset>
+# hooks.PostCompact = []
+# hooks.PostCompact[].hooks = []
+# hooks.PostCompact[].hooks[].additionalContextLimit = <not declared by schema>
+# hooks.PostCompact[].hooks[].async = false
+# hooks.PostCompact[].hooks[].command = <not declared by schema>
+# hooks.PostCompact[].hooks[].commandWindows = <null / unset>
+# hooks.PostCompact[].hooks[].statusMessage = <null / unset>
+# hooks.PostCompact[].hooks[].timeout = <null / unset>
+# hooks.PostCompact[].hooks[].type = <not declared by schema>
+# hooks.PostCompact[].matcher = <null / unset>
+# hooks.PostToolUse = []
+# hooks.PostToolUse[].hooks = []
+# hooks.PostToolUse[].hooks[].additionalContextLimit = <not declared by schema>
+# hooks.PostToolUse[].hooks[].async = false
+# hooks.PostToolUse[].hooks[].command = <not declared by schema>
+# hooks.PostToolUse[].hooks[].commandWindows = <null / unset>
+# hooks.PostToolUse[].hooks[].statusMessage = <null / unset>
+# hooks.PostToolUse[].hooks[].timeout = <null / unset>
+# hooks.PostToolUse[].hooks[].type = <not declared by schema>
+# hooks.PostToolUse[].matcher = <null / unset>
+# hooks.PreCompact = []
+# hooks.PreCompact[].hooks = []
+# hooks.PreCompact[].hooks[].additionalContextLimit = <not declared by schema>
+# hooks.PreCompact[].hooks[].async = false
+# hooks.PreCompact[].hooks[].command = <not declared by schema>
+# hooks.PreCompact[].hooks[].commandWindows = <null / unset>
+# hooks.PreCompact[].hooks[].statusMessage = <null / unset>
+# hooks.PreCompact[].hooks[].timeout = <null / unset>
+# hooks.PreCompact[].hooks[].type = <not declared by schema>
+# hooks.PreCompact[].matcher = <null / unset>
+# hooks.PreToolUse = []
+# hooks.PreToolUse[].hooks = []
+# hooks.PreToolUse[].hooks[].additionalContextLimit = <not declared by schema>
+# hooks.PreToolUse[].hooks[].async = false
+# hooks.PreToolUse[].hooks[].command = <not declared by schema>
+# hooks.PreToolUse[].hooks[].commandWindows = <null / unset>
+# hooks.PreToolUse[].hooks[].statusMessage = <null / unset>
+# hooks.PreToolUse[].hooks[].timeout = <null / unset>
+# hooks.PreToolUse[].hooks[].type = <not declared by schema>
+# hooks.PreToolUse[].matcher = <null / unset>
+# hooks.SessionEnd = []
+# hooks.SessionEnd[].hooks = []
+# hooks.SessionEnd[].hooks[].additionalContextLimit = <not declared by schema>
+# hooks.SessionEnd[].hooks[].async = false
+# hooks.SessionEnd[].hooks[].command = <not declared by schema>
+# hooks.SessionEnd[].hooks[].commandWindows = <null / unset>
+# hooks.SessionEnd[].hooks[].statusMessage = <null / unset>
+# hooks.SessionEnd[].hooks[].timeout = <null / unset>
+# hooks.SessionEnd[].hooks[].type = <not declared by schema>
+# hooks.SessionEnd[].matcher = <null / unset>
+# hooks.SessionStart = []
+# hooks.SessionStart[].hooks = []
+# hooks.SessionStart[].hooks[].additionalContextLimit = <not declared by schema>
+# hooks.SessionStart[].hooks[].async = false
+# hooks.SessionStart[].hooks[].command = <not declared by schema>
+# hooks.SessionStart[].hooks[].commandWindows = <null / unset>
+# hooks.SessionStart[].hooks[].statusMessage = <null / unset>
+# hooks.SessionStart[].hooks[].timeout = <null / unset>
+# hooks.SessionStart[].hooks[].type = <not declared by schema>
+# hooks.SessionStart[].matcher = <null / unset>
+# hooks.Stop = []
+# hooks.Stop[].hooks = []
+# hooks.Stop[].hooks[].additionalContextLimit = <not declared by schema>
+# hooks.Stop[].hooks[].async = false
+# hooks.Stop[].hooks[].command = <not declared by schema>
+# hooks.Stop[].hooks[].commandWindows = <null / unset>
+# hooks.Stop[].hooks[].statusMessage = <null / unset>
+# hooks.Stop[].hooks[].timeout = <null / unset>
+# hooks.Stop[].hooks[].type = <not declared by schema>
+# hooks.Stop[].matcher = <null / unset>
+# hooks.SubagentStart = []
+# hooks.SubagentStart[].hooks = []
+# hooks.SubagentStart[].hooks[].additionalContextLimit = <not declared by schema>
+# hooks.SubagentStart[].hooks[].async = false
+# hooks.SubagentStart[].hooks[].command = <not declared by schema>
+# hooks.SubagentStart[].hooks[].commandWindows = <null / unset>
+# hooks.SubagentStart[].hooks[].statusMessage = <null / unset>
+# hooks.SubagentStart[].hooks[].timeout = <null / unset>
+# hooks.SubagentStart[].hooks[].type = <not declared by schema>
+# hooks.SubagentStart[].matcher = <null / unset>
+# hooks.SubagentStop = []
+# hooks.SubagentStop[].hooks = []
+# hooks.SubagentStop[].hooks[].additionalContextLimit = <not declared by schema>
+# hooks.SubagentStop[].hooks[].async = false
+# hooks.SubagentStop[].hooks[].command = <not declared by schema>
+# hooks.SubagentStop[].hooks[].commandWindows = <null / unset>
+# hooks.SubagentStop[].hooks[].statusMessage = <null / unset>
+# hooks.SubagentStop[].hooks[].timeout = <null / unset>
+# hooks.SubagentStop[].hooks[].type = <not declared by schema>
+# hooks.SubagentStop[].matcher = <null / unset>
+# hooks.UserPromptSubmit = []
+# hooks.UserPromptSubmit[].hooks = []
+# hooks.UserPromptSubmit[].hooks[].additionalContextLimit = <not declared by schema>
+# hooks.UserPromptSubmit[].hooks[].async = false
+# hooks.UserPromptSubmit[].hooks[].command = <not declared by schema>
+# hooks.UserPromptSubmit[].hooks[].commandWindows = <null / unset>
+# hooks.UserPromptSubmit[].hooks[].statusMessage = <null / unset>
+# hooks.UserPromptSubmit[].hooks[].timeout = <null / unset>
+# hooks.UserPromptSubmit[].hooks[].type = <not declared by schema>
+# hooks.UserPromptSubmit[].matcher = <null / unset>
+# hooks.state = <not declared by schema>
+# hooks.state."<name>" = <not declared by schema>
+# hooks.state."<name>".enabled = <not declared by schema>
+# hooks.state."<name>".trusted_hash = <not declared by schema>
+
+# --- include_apps_instructions ---
+# include_apps_instructions = <not declared by schema>
+
+# --- include_collaboration_mode_instructions ---
+# include_collaboration_mode_instructions = <not declared by schema>
+
+# --- include_environment_context ---
+# include_environment_context = <not declared by schema>
+
+# --- include_permissions_instructions ---
+# include_permissions_instructions = <not declared by schema>
+
+# --- instructions ---
+# instructions = <not declared by schema>
+
+# --- log_dir ---
+# log_dir = <not declared by schema>
+
+# --- marketplaces ---
+# marketplaces = {  }
+# marketplaces."<name>" = <not declared by schema>
+# marketplaces."<name>".last_revision = <null / unset>
+# marketplaces."<name>".last_updated = <null / unset>
+# marketplaces."<name>".ref = <null / unset>
+# marketplaces."<name>".source = <null / unset>
+# marketplaces."<name>".source_type = <null / unset>
+# marketplaces."<name>".sparse_paths = <null / unset>
+
+# --- mcp_oauth_callback_port ---
+# mcp_oauth_callback_port = <not declared by schema>
+
+# --- mcp_oauth_callback_url ---
+# mcp_oauth_callback_url = <not declared by schema>
+
+# --- mcp_oauth_credentials_store ---
+# mcp_oauth_credentials_store = <null / unset>
+
+# --- mcp_servers ---
+# mcp_servers = {  }
+# mcp_servers."<name>" = <not declared by schema>
+# mcp_servers."<name>".args = <null / unset>
+# mcp_servers."<name>".auth = <null / unset>
+# mcp_servers."<name>".bearer_token_env_var = <not declared by schema>
+# mcp_servers."<name>".command = <not declared by schema>
+# mcp_servers."<name>".cwd = <null / unset>
+# mcp_servers."<name>".default_tools_approval_mode = <null / unset>
+# mcp_servers."<name>".disabled_tools = <null / unset>
+# mcp_servers."<name>".enabled = <null / unset>
+# mcp_servers."<name>".enabled_tools = <null / unset>
+# mcp_servers."<name>".env = <null / unset>
+# mcp_servers."<name>".env."<name>" = <not declared by schema>
+# mcp_servers."<name>".env_http_headers = <null / unset>
+# mcp_servers."<name>".env_http_headers."<name>" = <not declared by schema>
+# mcp_servers."<name>".env_vars = <null / unset>
+# mcp_servers."<name>".env_vars[].name = <not declared by schema>
+# mcp_servers."<name>".env_vars[].source = <not declared by schema>
+# mcp_servers."<name>".environment_id = <null / unset>
+# mcp_servers."<name>".http_headers = <not declared by schema>
+# mcp_servers."<name>".http_headers."<name>" = <not declared by schema>
+# mcp_servers."<name>".name = <null / unset>
+# mcp_servers."<name>".oauth = <null / unset>
+# mcp_servers."<name>".oauth.client_id = <not declared by schema>
+# mcp_servers."<name>".oauth_resource = <null / unset>
+# mcp_servers."<name>".required = <null / unset>
+# mcp_servers."<name>".scopes = <null / unset>
+# mcp_servers."<name>".startup_timeout_ms = <null / unset>
+# mcp_servers."<name>".startup_timeout_sec = <null / unset>
+# mcp_servers."<name>".supports_parallel_tool_calls = <null / unset>
+# mcp_servers."<name>".tool_timeout_sec = <null / unset>
+# mcp_servers."<name>".tools = <null / unset>
+# mcp_servers."<name>".tools."<name>" = <not declared by schema>
+# mcp_servers."<name>".tools."<name>".approval_mode = <not declared by schema>
+# mcp_servers."<name>".url = <not declared by schema>
+
+# --- memories ---
+# memories = <not declared by schema>
+# memories.consolidation_model = <not declared by schema>
+# memories.dedicated_tools = <not declared by schema>
+# memories.disable_on_external_context = <not declared by schema>
+# memories.extract_model = <not declared by schema>
+# memories.generate_memories = <not declared by schema>
+# memories.max_raw_memories_for_consolidation = <not declared by schema>
+# memories.max_rollout_age_days = <not declared by schema>
+# memories.max_rollouts_per_startup = <not declared by schema>
+# memories.max_unused_days = <not declared by schema>
+# memories.min_rate_limit_remaining_percent = <not declared by schema>
+# memories.min_rollout_idle_hours = <not declared by schema>
+# memories.use_memories = <not declared by schema>
+
+# --- model ---
+# model = <not declared by schema>
+
+# --- model_auto_compact_token_limit ---
+# model_auto_compact_token_limit = <not declared by schema>
+
+# --- model_auto_compact_token_limit_scope ---
+# model_auto_compact_token_limit_scope = <not declared by schema>
+
+# --- model_catalog_json ---
+# model_catalog_json = <not declared by schema>
+
+# --- model_context_window ---
+# model_context_window = <not declared by schema>
+
+# --- model_instructions_file ---
+# model_instructions_file = <not declared by schema>
+
+# --- model_provider ---
+# model_provider = <not declared by schema>
+
+# --- model_providers ---
+# model_providers = {  }
+# model_providers."<name>" = <not declared by schema>
+# model_providers."<name>".auth = <not declared by schema>
+# model_providers."<name>".auth.args = []
+# model_providers."<name>".auth.command = <not declared by schema>
+# model_providers."<name>".auth.cwd = <not declared by schema>
+# model_providers."<name>".auth.refresh_interval_ms = 300000
+# model_providers."<name>".auth.timeout_ms = 5000
+# model_providers."<name>".aws = <not declared by schema>
+# model_providers."<name>".aws.profile = <not declared by schema>
+# model_providers."<name>".aws.region = <not declared by schema>
+# model_providers."<name>".base_url = <not declared by schema>
+# model_providers."<name>".env_http_headers = <not declared by schema>
+# model_providers."<name>".env_http_headers."<name>" = <not declared by schema>
+# model_providers."<name>".env_key = <not declared by schema>
+# model_providers."<name>".env_key_instructions = <not declared by schema>
+# model_providers."<name>".experimental_bearer_token = <not declared by schema>
+# model_providers."<name>".http_headers = <not declared by schema>
+# model_providers."<name>".http_headers."<name>" = <not declared by schema>
+# model_providers."<name>".name = ""
+# model_providers."<name>".query_params = <not declared by schema>
+# model_providers."<name>".query_params."<name>" = <not declared by schema>
+# model_providers."<name>".request_max_retries = <not declared by schema>
+# model_providers."<name>".requires_openai_auth = false
+# model_providers."<name>".stream_idle_timeout_ms = <not declared by schema>
+# model_providers."<name>".stream_max_retries = <not declared by schema>
+# model_providers."<name>".supports_standalone_web_search = false
+# model_providers."<name>".supports_websockets = false
+# model_providers."<name>".websocket_connect_timeout_ms = <not declared by schema>
+# model_providers."<name>".wire_api = "responses"
+
+# --- model_reasoning_effort ---
+# model_reasoning_effort = <not declared by schema>
+
+# --- model_reasoning_summary ---
+# model_reasoning_summary = <not declared by schema>
+
+# --- model_verbosity ---
+# model_verbosity = <not declared by schema>
+
+# --- notice ---
+# notice = <not declared by schema>
+# notice.external_config_migration_prompts = { home = <null / unset>, home_last_prompted_at = <null / unset>, project_last_prompted_at = {  }, projects = {  } }
+# notice.external_config_migration_prompts.home = <not declared by schema>
+# notice.external_config_migration_prompts.home_last_prompted_at = <not declared by schema>
+# notice.external_config_migration_prompts.project_last_prompted_at = {  }
+# notice.external_config_migration_prompts.project_last_prompted_at."<name>" = <not declared by schema>
+# notice.external_config_migration_prompts.projects = {  }
+# notice.external_config_migration_prompts.projects."<name>" = <not declared by schema>
+# notice.fast_default_opt_out = <not declared by schema>
+# notice.hide_full_access_warning = <not declared by schema>
+# notice."hide_gpt-5.1-codex-max_migration_prompt" = <not declared by schema>
+# notice.hide_gpt5_1_migration_prompt = <not declared by schema>
+# notice.hide_rate_limit_model_nudge = <not declared by schema>
+# notice.hide_world_writable_warning = <not declared by schema>
+# notice.model_migrations = {  }
+# notice.model_migrations."<name>" = <not declared by schema>
+
+# --- notify ---
+# notify = <null / unset>
+
+# --- openai_base_url ---
+# openai_base_url = <not declared by schema>
+
+# --- orchestrator ---
+# orchestrator = <not declared by schema>
+# orchestrator.mcp = <not declared by schema>
+# orchestrator.mcp.enabled = <not declared by schema>
+# orchestrator.skills = <not declared by schema>
+# orchestrator.skills.enabled = <not declared by schema>
+
+# --- oss_provider ---
+# oss_provider = <not declared by schema>
+
+# --- otel ---
+# otel = <not declared by schema>
+# otel.environment = <not declared by schema>
+# otel.exporter = <not declared by schema>
+# otel.exporter.otlp-http = <not declared by schema>
+# otel.exporter.otlp-http.endpoint = <not declared by schema>
+# otel.exporter.otlp-http.headers = {  }
+# otel.exporter.otlp-http.headers."<name>" = <not declared by schema>
+# otel.exporter.otlp-http.protocol = <not declared by schema>
+# otel.exporter.otlp-http.tls = <null / unset>
+# otel.exporter.otlp-http.tls.ca-certificate = <not declared by schema>
+# otel.exporter.otlp-http.tls.client-certificate = <not declared by schema>
+# otel.exporter.otlp-http.tls.client-private-key = <not declared by schema>
+# otel.exporter.otlp-grpc = <not declared by schema>
+# otel.exporter.otlp-grpc.endpoint = <not declared by schema>
+# otel.exporter.otlp-grpc.headers = {  }
+# otel.exporter.otlp-grpc.headers."<name>" = <not declared by schema>
+# otel.exporter.otlp-grpc.tls = <null / unset>
+# otel.exporter.otlp-grpc.tls.ca-certificate = <not declared by schema>
+# otel.exporter.otlp-grpc.tls.client-certificate = <not declared by schema>
+# otel.exporter.otlp-grpc.tls.client-private-key = <not declared by schema>
+# otel.log_user_prompt = <not declared by schema>
+# otel.metrics_exporter = <not declared by schema>
+# otel.metrics_exporter.otlp-http = <not declared by schema>
+# otel.metrics_exporter.otlp-http.endpoint = <not declared by schema>
+# otel.metrics_exporter.otlp-http.headers = {  }
+# otel.metrics_exporter.otlp-http.headers."<name>" = <not declared by schema>
+# otel.metrics_exporter.otlp-http.protocol = <not declared by schema>
+# otel.metrics_exporter.otlp-http.tls = <null / unset>
+# otel.metrics_exporter.otlp-http.tls.ca-certificate = <not declared by schema>
+# otel.metrics_exporter.otlp-http.tls.client-certificate = <not declared by schema>
+# otel.metrics_exporter.otlp-http.tls.client-private-key = <not declared by schema>
+# otel.metrics_exporter.otlp-grpc = <not declared by schema>
+# otel.metrics_exporter.otlp-grpc.endpoint = <not declared by schema>
+# otel.metrics_exporter.otlp-grpc.headers = {  }
+# otel.metrics_exporter.otlp-grpc.headers."<name>" = <not declared by schema>
+# otel.metrics_exporter.otlp-grpc.tls = <null / unset>
+# otel.metrics_exporter.otlp-grpc.tls.ca-certificate = <not declared by schema>
+# otel.metrics_exporter.otlp-grpc.tls.client-certificate = <not declared by schema>
+# otel.metrics_exporter.otlp-grpc.tls.client-private-key = <not declared by schema>
+# otel.span_attributes = <not declared by schema>
+# otel.span_attributes."<name>" = <not declared by schema>
+# otel.trace_exporter = <not declared by schema>
+# otel.trace_exporter.otlp-http = <not declared by schema>
+# otel.trace_exporter.otlp-http.endpoint = <not declared by schema>
+# otel.trace_exporter.otlp-http.headers = {  }
+# otel.trace_exporter.otlp-http.headers."<name>" = <not declared by schema>
+# otel.trace_exporter.otlp-http.protocol = <not declared by schema>
+# otel.trace_exporter.otlp-http.tls = <null / unset>
+# otel.trace_exporter.otlp-http.tls.ca-certificate = <not declared by schema>
+# otel.trace_exporter.otlp-http.tls.client-certificate = <not declared by schema>
+# otel.trace_exporter.otlp-http.tls.client-private-key = <not declared by schema>
+# otel.trace_exporter.otlp-grpc = <not declared by schema>
+# otel.trace_exporter.otlp-grpc.endpoint = <not declared by schema>
+# otel.trace_exporter.otlp-grpc.headers = {  }
+# otel.trace_exporter.otlp-grpc.headers."<name>" = <not declared by schema>
+# otel.trace_exporter.otlp-grpc.tls = <null / unset>
+# otel.trace_exporter.otlp-grpc.tls.ca-certificate = <not declared by schema>
+# otel.trace_exporter.otlp-grpc.tls.client-certificate = <not declared by schema>
+# otel.trace_exporter.otlp-grpc.tls.client-private-key = <not declared by schema>
+# otel.tracestate = <not declared by schema>
+# otel.tracestate."<name>" = <not declared by schema>
+# otel.tracestate."<name>"."<name>" = <not declared by schema>
+
+# --- permissions ---
+# permissions = <null / unset>
+
+# --- personality ---
+# personality = <not declared by schema>
+
+# --- plan_mode_reasoning_effort ---
+# plan_mode_reasoning_effort = <not declared by schema>
+
+# --- plugins ---
+# plugins = {  }
+# plugins."<name>" = <not declared by schema>
+# plugins."<name>".enabled = true
+# plugins."<name>".mcp_servers = <not declared by schema>
+# plugins."<name>".mcp_servers."<name>" = <not declared by schema>
+# plugins."<name>".mcp_servers."<name>".default_tools_approval_mode = <not declared by schema>
+# plugins."<name>".mcp_servers."<name>".disabled_tools = <not declared by schema>
+# plugins."<name>".mcp_servers."<name>".enabled = true
+# plugins."<name>".mcp_servers."<name>".enabled_tools = <not declared by schema>
+# plugins."<name>".mcp_servers."<name>".tools = <not declared by schema>
+# plugins."<name>".mcp_servers."<name>".tools."<name>" = <not declared by schema>
+# plugins."<name>".mcp_servers."<name>".tools."<name>".approval_mode = <not declared by schema>
+
+# --- profile ---
+# profile = <not declared by schema>
+
+# --- profiles ---
+# profiles = {  }
+# profiles."<name>" = <not declared by schema>
+# profiles."<name>".analytics = <not declared by schema>
+# profiles."<name>".analytics.enabled = <not declared by schema>
+# profiles."<name>".approval_policy = <not declared by schema>
+# profiles."<name>".approval_policy.granular = <not declared by schema>
+# profiles."<name>".approval_policy.granular.mcp_elicitations = <not declared by schema>
+# profiles."<name>".approval_policy.granular.request_permissions = false
+# profiles."<name>".approval_policy.granular.rules = <not declared by schema>
+# profiles."<name>".approval_policy.granular.sandbox_approval = <not declared by schema>
+# profiles."<name>".approval_policy.granular.skill_approval = false
+# profiles."<name>".approvals_reviewer = <not declared by schema>
+# profiles."<name>".chatgpt_base_url = <not declared by schema>
+# profiles."<name>".experimental_compact_prompt_file = <not declared by schema>
+# profiles."<name>".experimental_use_unified_exec_tool = <not declared by schema>
+# profiles."<name>".features = <null / unset>
+# profiles."<name>".features.apply_patch_freeform = <not declared by schema>
+# profiles."<name>".features.apply_patch_streaming_events = <not declared by schema>
+# profiles."<name>".features.apps = <not declared by schema>
+# profiles."<name>".features.apps_mcp_path_override = <not declared by schema>
+# profiles."<name>".features.apps_mcp_path_override.enabled = <not declared by schema>
+# profiles."<name>".features.apps_mcp_path_override.path = <not declared by schema>
+# profiles."<name>".features.auth_elicitation = <not declared by schema>
+# profiles."<name>".features.browser_use = <not declared by schema>
+# profiles."<name>".features.browser_use_external = <not declared by schema>
+# profiles."<name>".features.browser_use_full_cdp_access = <not declared by schema>
+# profiles."<name>".features.chronicle = <not declared by schema>
+# profiles."<name>".features.code_mode = <not declared by schema>
+# profiles."<name>".features.code_mode.direct_only_tool_namespaces = <not declared by schema>
+# profiles."<name>".features.code_mode.enabled = <not declared by schema>
+# profiles."<name>".features.code_mode.excluded_tool_namespaces = <not declared by schema>
+# profiles."<name>".features.code_mode_buffered_exec = <not declared by schema>
+# profiles."<name>".features.code_mode_host = <not declared by schema>
+# profiles."<name>".features.code_mode_host.disable_in_process_fallback = <not declared by schema>
+# profiles."<name>".features.code_mode_host.enabled = <not declared by schema>
+# profiles."<name>".features.code_mode_only = <not declared by schema>
+# profiles."<name>".features.codex_git_commit = <not declared by schema>
+# profiles."<name>".features.codex_hooks = <not declared by schema>
+# profiles."<name>".features.collab = <not declared by schema>
+# profiles."<name>".features.collaboration_modes = <not declared by schema>
+# profiles."<name>".features.computer_use = <not declared by schema>
+# profiles."<name>".features.concurrent_reasoning_summaries = <not declared by schema>
+# profiles."<name>".features.connectors = <not declared by schema>
+# profiles."<name>".features.current_time_reminder = <not declared by schema>
+# profiles."<name>".features.current_time_reminder.clock_source = <not declared by schema>
+# profiles."<name>".features.current_time_reminder.delivery_mode = <not declared by schema>
+# profiles."<name>".features.current_time_reminder.enabled = <not declared by schema>
+# profiles."<name>".features.current_time_reminder.reminder_interval_seconds = <not declared by schema>
+# profiles."<name>".features.current_time_reminder.sleep_tool = <not declared by schema>
+# profiles."<name>".features.default_mode_request_user_input = <not declared by schema>
+# profiles."<name>".features.deferred_executor = <not declared by schema>
+# profiles."<name>".features.deferred_tool_world_state = <not declared by schema>
+# profiles."<name>".features.elevated_windows_sandbox = <not declared by schema>
+# profiles."<name>".features.enable_experimental_windows_sandbox = <not declared by schema>
+# profiles."<name>".features.enable_fanout = <not declared by schema>
+# profiles."<name>".features.enable_mcp_apps = <not declared by schema>
+# profiles."<name>".features.enable_request_compression = <not declared by schema>
+# profiles."<name>".features.exec_permission_approvals = <not declared by schema>
+# profiles."<name>".features.executed_tool_call_metadata = <not declared by schema>
+# profiles."<name>".features.executor_capability_discovery = <not declared by schema>
+# profiles."<name>".features.experimental_use_unified_exec_tool = <not declared by schema>
+# profiles."<name>".features.experimental_windows_sandbox = <not declared by schema>
+# profiles."<name>".features.external_agent_memory_import = <not declared by schema>
+# profiles."<name>".features.external_migration = <not declared by schema>
+# profiles."<name>".features.fast_mode = <not declared by schema>
+# profiles."<name>".features.goals = <not declared by schema>
+# profiles."<name>".features.guardian_approval = <not declared by schema>
+# profiles."<name>".features.guardianv2 = <not declared by schema>
+# profiles."<name>".features.hooks = <not declared by schema>
+# profiles."<name>".features.image_detail_original = <not declared by schema>
+# profiles."<name>".features.image_generation = <not declared by schema>
+# profiles."<name>".features.imagegenext = <not declared by schema>
+# profiles."<name>".features.in_app_browser = <not declared by schema>
+# profiles."<name>".features.in_app_updates = <not declared by schema>
+# profiles."<name>".features.item_ids = <not declared by schema>
+# profiles."<name>".features.js_repl = <not declared by schema>
+# profiles."<name>".features.js_repl_tools_only = <not declared by schema>
+# profiles."<name>".features.local_thread_store_compression = <not declared by schema>
+# profiles."<name>".features.mcp_2026_07_28 = <not declared by schema>
+# profiles."<name>".features.memories = <not declared by schema>
+# profiles."<name>".features.memory_tool = <not declared by schema>
+# profiles."<name>".features.mentions_v2 = <not declared by schema>
+# profiles."<name>".features.multi_agent = <not declared by schema>
+# profiles."<name>".features.multi_agent_mode = <not declared by schema>
+# profiles."<name>".features.multi_agent_v2 = <not declared by schema>
+# profiles."<name>".features.multi_agent_v2.default_wait_timeout_ms = <not declared by schema>
+# profiles."<name>".features.multi_agent_v2.enabled = <not declared by schema>
+# profiles."<name>".features.multi_agent_v2.expose_spawn_agent_model_overrides = <not declared by schema>
+# profiles."<name>".features.multi_agent_v2.hide_spawn_agent_metadata = <not declared by schema>
+# profiles."<name>".features.multi_agent_v2.max_concurrent_threads_per_session = <not declared by schema>
+# profiles."<name>".features.multi_agent_v2.max_wait_timeout_ms = <not declared by schema>
+# profiles."<name>".features.multi_agent_v2.min_wait_timeout_ms = <not declared by schema>
+# profiles."<name>".features.multi_agent_v2.multi_agent_mode_hint_text = <not declared by schema>
+# profiles."<name>".features.multi_agent_v2.non_code_mode_only = <not declared by schema>
+# profiles."<name>".features.multi_agent_v2.root_agent_usage_hint_text = <not declared by schema>
+# profiles."<name>".features.multi_agent_v2.subagent_developer_instructions = <not declared by schema>
+# profiles."<name>".features.multi_agent_v2.subagent_usage_hint_text = <not declared by schema>
+# profiles."<name>".features.multi_agent_v2.tool_namespace = <not declared by schema>
+# profiles."<name>".features.multi_agent_v2.usage_hint_enabled = <not declared by schema>
+# profiles."<name>".features.multi_agent_v2.usage_hint_text = <not declared by schema>
+# profiles."<name>".features.multi_agent_v2.wait_agent_enabled = <not declared by schema>
+# profiles."<name>".features.network_proxy = <not declared by schema>
+# profiles."<name>".features.network_proxy.allow_local_binding = <not declared by schema>
+# profiles."<name>".features.network_proxy.allow_upstream_proxy = <not declared by schema>
+# profiles."<name>".features.network_proxy.dangerously_allow_all_unix_sockets = <not declared by schema>
+# profiles."<name>".features.network_proxy.dangerously_allow_non_loopback_proxy = <not declared by schema>
+# profiles."<name>".features.network_proxy.domains = <not declared by schema>
+# profiles."<name>".features.network_proxy.domains."<name>" = <not declared by schema>
+# profiles."<name>".features.network_proxy.enable_socks5 = <not declared by schema>
+# profiles."<name>".features.network_proxy.enable_socks5_udp = <not declared by schema>
+# profiles."<name>".features.network_proxy.enabled = <not declared by schema>
+# profiles."<name>".features.network_proxy.mode = <not declared by schema>
+# profiles."<name>".features.network_proxy.proxy_url = <not declared by schema>
+# profiles."<name>".features.network_proxy.socks_url = <not declared by schema>
+# profiles."<name>".features.network_proxy.unix_sockets = <not declared by schema>
+# profiles."<name>".features.network_proxy.unix_sockets."<name>" = <not declared by schema>
+# profiles."<name>".features.non_prefixed_mcp_tool_names = <not declared by schema>
+# profiles."<name>".features.non_prefixed_mcp_tool_names.enabled = <not declared by schema>
+# profiles."<name>".features.non_prefixed_mcp_tool_names.server_names = <not declared by schema>
+# profiles."<name>".features.personality = <not declared by schema>
+# profiles."<name>".features.plugin_hooks = <not declared by schema>
+# profiles."<name>".features.plugin_sharing = <not declared by schema>
+# profiles."<name>".features.plugins = <not declared by schema>
+# profiles."<name>".features.prevent_idle_sleep = <not declared by schema>
+# profiles."<name>".features.realtime_conversation = <not declared by schema>
+# profiles."<name>".features.recommended_plugins = <not declared by schema>
+# profiles."<name>".features.remote_compaction_v2 = <not declared by schema>
+# profiles."<name>".features.remote_control = <not declared by schema>
+# profiles."<name>".features.remote_models = <not declared by schema>
+# profiles."<name>".features.remote_plugin = <not declared by schema>
+# profiles."<name>".features.request_permissions = <not declared by schema>
+# profiles."<name>".features.request_permissions_tool = <not declared by schema>
+# profiles."<name>".features.request_rule = <not declared by schema>
+# profiles."<name>".features.resize_all_images = <not declared by schema>
+# profiles."<name>".features.respect_system_proxy = <not declared by schema>
+# profiles."<name>".features.responses_websockets = <not declared by schema>
+# profiles."<name>".features.responses_websockets_v2 = <not declared by schema>
+# profiles."<name>".features.rollout_budget = <not declared by schema>
+# profiles."<name>".features.rollout_budget.enabled = <not declared by schema>
+# profiles."<name>".features.rollout_budget.limit_tokens = <not declared by schema>
+# profiles."<name>".features.rollout_budget.prefill_token_weight = <not declared by schema>
+# profiles."<name>".features.rollout_budget.reminder_at_remaining_tokens = <not declared by schema>
+# profiles."<name>".features.rollout_budget.sampling_token_weight = <not declared by schema>
+# profiles."<name>".features.runtime_metrics = <not declared by schema>
+# profiles."<name>".features.search_tool = <not declared by schema>
+# profiles."<name>".features.secret_auth_storage = <not declared by schema>
+# profiles."<name>".features.shell_snapshot = <not declared by schema>
+# profiles."<name>".features.shell_tool = <not declared by schema>
+# profiles."<name>".features.shell_zsh_fork = <not declared by schema>
+# profiles."<name>".features.skill_env_var_dependency_prompt = <not declared by schema>
+# profiles."<name>".features.skill_mcp_dependency_install = <not declared by schema>
+# profiles."<name>".features.skill_search = <not declared by schema>
+# profiles."<name>".features.sqlite = <not declared by schema>
+# profiles."<name>".features.standalone_web_search = <not declared by schema>
+# profiles."<name>".features.steer = <not declared by schema>
+# profiles."<name>".features.telepathy = <not declared by schema>
+# profiles."<name>".features.terminal_resize_reflow = <not declared by schema>
+# profiles."<name>".features.terminal_visualization_instructions = <not declared by schema>
+# profiles."<name>".features.token_budget = <not declared by schema>
+# profiles."<name>".features.token_budget.auto_compact_fallback_buffer_tokens = <not declared by schema>
+# profiles."<name>".features.token_budget.auto_compact_fallback_prompt = <not declared by schema>
+# profiles."<name>".features.token_budget.enabled = <not declared by schema>
+# profiles."<name>".features.token_budget.guidance_message = <not declared by schema>
+# profiles."<name>".features.token_budget.reminder_message_template = <not declared by schema>
+# profiles."<name>".features.token_budget.reminder_threshold_tokens = <not declared by schema>
+# profiles."<name>".features.tool_call_mcp_elicitation = <not declared by schema>
+# profiles."<name>".features.tool_search = <not declared by schema>
+# profiles."<name>".features.tool_search_always_defer_mcp_tools = <not declared by schema>
+# profiles."<name>".features.tool_suggest = <not declared by schema>
+# profiles."<name>".features.tui_app_server = <not declared by schema>
+# profiles."<name>".features.unavailable_dummy_tools = <not declared by schema>
+# profiles."<name>".features.undo = <not declared by schema>
+# profiles."<name>".features.unified_exec = <not declared by schema>
+# profiles."<name>".features.unified_exec_zsh_fork = <not declared by schema>
+# profiles."<name>".features.use_agent_identity = <not declared by schema>
+# profiles."<name>".features.use_legacy_landlock = <not declared by schema>
+# profiles."<name>".features.use_linux_sandbox_bwrap = <not declared by schema>
+# profiles."<name>".features.web_search = <not declared by schema>
+# profiles."<name>".features.web_search_cached = <not declared by schema>
+# profiles."<name>".features.web_search_request = <not declared by schema>
+# profiles."<name>".features.workspace_dependencies = <not declared by schema>
+# profiles."<name>".features.workspace_owner_usage_nudge = <not declared by schema>
+# profiles."<name>".include_apps_instructions = <not declared by schema>
+# profiles."<name>".include_collaboration_mode_instructions = <not declared by schema>
+# profiles."<name>".include_environment_context = <not declared by schema>
+# profiles."<name>".include_permissions_instructions = <not declared by schema>
+# profiles."<name>".model = <not declared by schema>
+# profiles."<name>".model_catalog_json = <not declared by schema>
+# profiles."<name>".model_instructions_file = <not declared by schema>
+# profiles."<name>".model_provider = <not declared by schema>
+# profiles."<name>".model_reasoning_effort = <not declared by schema>
+# profiles."<name>".model_reasoning_summary = <not declared by schema>
+# profiles."<name>".model_verbosity = <not declared by schema>
+# profiles."<name>".oss_provider = <not declared by schema>
+# profiles."<name>".personality = <not declared by schema>
+# profiles."<name>".plan_mode_reasoning_effort = <not declared by schema>
+# profiles."<name>".sandbox_mode = <not declared by schema>
+# profiles."<name>".service_tier = <not declared by schema>
+# profiles."<name>".tools = <not declared by schema>
+# profiles."<name>".tools.experimental_request_user_input = <not declared by schema>
+# profiles."<name>".tools.experimental_request_user_input.enabled = true
+# profiles."<name>".tools.update_plan = <not declared by schema>
+# profiles."<name>".tools.update_plan.enabled = true
+# profiles."<name>".tools.web_search = <null / unset>
+# profiles."<name>".tools.web_search.allowed_domains = <not declared by schema>
+# profiles."<name>".tools.web_search.context_size = <not declared by schema>
+# profiles."<name>".tools.web_search.location = <not declared by schema>
+# profiles."<name>".tools.web_search.location.city = <not declared by schema>
+# profiles."<name>".tools.web_search.location.country = <not declared by schema>
+# profiles."<name>".tools.web_search.location.region = <not declared by schema>
+# profiles."<name>".tools.web_search.location.timezone = <not declared by schema>
+# profiles."<name>".tui = <null / unset>
+# profiles."<name>".tui.session_picker_view = <null / unset>
+# profiles."<name>".web_search = <not declared by schema>
+# profiles."<name>".windows = <null / unset>
+# profiles."<name>".windows.sandbox = <not declared by schema>
+# profiles."<name>".windows.sandbox_private_desktop = <not declared by schema>
+
+# --- project_doc_fallback_filenames ---
+# project_doc_fallback_filenames = []
+
+# --- project_doc_max_bytes ---
+# project_doc_max_bytes = 32768
+
+# --- project_root_markers ---
+# project_root_markers = <null / unset>
+
+# --- projects ---
+# projects = <not declared by schema>
+# projects."<name>" = <not declared by schema>
+# projects."<name>".trust_level = <not declared by schema>
+
+# --- realtime ---
+# realtime = <null / unset>
+# realtime.transport = <not declared by schema>
+# realtime.type = <not declared by schema>
+# realtime.version = <not declared by schema>
+# realtime.voice = <not declared by schema>
+
+# --- review_model ---
+# review_model = <not declared by schema>
+
+# --- sandbox_mode ---
+# sandbox_mode = <not declared by schema>
+
+# --- sandbox_workspace_write ---
+# sandbox_workspace_write = <not declared by schema>
+# sandbox_workspace_write.exclude_slash_tmp = false
+# sandbox_workspace_write.exclude_tmpdir_env_var = false
+# sandbox_workspace_write.network_access = false
+# sandbox_workspace_write.writable_roots = []
+
+# --- service_tier ---
+# service_tier = <not declared by schema>
+
+# --- shell_environment_policy ---
+# shell_environment_policy = { exclude = <null / unset>, experimental_use_profile = <null / unset>, filters = <null / unset>, ignore_default_excludes = <null / unset>, include_only = <null / unset>, inherit = <null / unset>, set = <null / unset> }
+# shell_environment_policy.exclude = <not declared by schema>
+# shell_environment_policy.experimental_use_profile = <not declared by schema>
+# shell_environment_policy.filters = <not declared by schema>
+# shell_environment_policy.filters."<name>" = <not declared by schema>
+# shell_environment_policy.ignore_default_excludes = <not declared by schema>
+# shell_environment_policy.include_only = <not declared by schema>
+# shell_environment_policy.inherit = <not declared by schema>
+# shell_environment_policy.set = <not declared by schema>
+# shell_environment_policy.set."<name>" = <not declared by schema>
+
+# --- show_raw_agent_reasoning ---
+# show_raw_agent_reasoning = <not declared by schema>
+
+# --- skills ---
+# skills = <not declared by schema>
+# skills.bundled = <not declared by schema>
+# skills.bundled.enabled = true
+# skills.config = <not declared by schema>
+# skills.config[].enabled = <not declared by schema>
+# skills.config[].name = <not declared by schema>
+# skills.config[].path = <not declared by schema>
+# skills.include_instructions = <not declared by schema>
+
+# --- sqlite_home ---
+# sqlite_home = <not declared by schema>
+
+# --- suppress_unstable_features_warning ---
+# suppress_unstable_features_warning = <not declared by schema>
+
+# --- tool_output_token_limit ---
+# tool_output_token_limit = <not declared by schema>
+
+# --- tool_suggest ---
+# tool_suggest = <not declared by schema>
+# tool_suggest.disabled_tools = []
+# tool_suggest.disabled_tools[].id = <not declared by schema>
+# tool_suggest.disabled_tools[].type = <not declared by schema>
+# tool_suggest.discoverables = []
+# tool_suggest.discoverables[].id = <not declared by schema>
+# tool_suggest.discoverables[].type = <not declared by schema>
+
+# --- tools ---
+# tools = <not declared by schema>
+# tools.experimental_request_user_input = <not declared by schema>
+# tools.experimental_request_user_input.enabled = true
+# tools.update_plan = <not declared by schema>
+# tools.update_plan.enabled = true
+# tools.web_search = <null / unset>
+# tools.web_search.allowed_domains = <not declared by schema>
+# tools.web_search.context_size = <not declared by schema>
+# tools.web_search.location = <not declared by schema>
+# tools.web_search.location.city = <not declared by schema>
+# tools.web_search.location.country = <not declared by schema>
+# tools.web_search.location.region = <not declared by schema>
+# tools.web_search.location.timezone = <not declared by schema>
+
+# --- tui ---
+# tui = <not declared by schema>
+# tui.alternate_screen = "auto"
+# tui.animations = true
+# tui.keymap = { approval = { approve = <null / unset>, approve_for_prefix = <null / unset>, approve_for_session = <null / unset>, cancel = <null / unset>, decline = <null / unset>, deny = <null / unset>, open_fullscreen = <null / unset>, open_thread = <null / unset> }, chat = { decrease_reasoning_effort = <null / unset>, edit_queued_message = <null / unset>, increase_reasoning_effort = <null / unset>, interrupt_turn = <null / unset> }, composer = { history_search_next = <null / unset>, history_search_previous = <null / unset>, queue = <null / unset>, submit = <null / unset>, toggle_shortcuts = <null / unset> }, editor = { delete_backward = <null / unset>, delete_backward_word = <null / unset>, delete_forward = <null / unset>, delete_forward_word = <null / unset>, insert_newline = <null / unset>, kill_line_end = <null / unset>, kill_line_start = <null / unset>, kill_whole_line = <null / unset>, move_down = <null / unset>, move_left = <null / unset>, move_line_end = <null / unset>, move_line_start = <null / unset>, move_right = <null / unset>, move_up = <null / unset>, move_word_left = <null / unset>, move_word_right = <null / unset>, yank = <null / unset> }, global = { clear_terminal = <null / unset>, copy = <null / unset>, open_external_editor = <null / unset>, open_transcript = <null / unset>, queue = <null / unset>, submit = <null / unset>, toggle_fast_mode = <null / unset>, toggle_raw_output = <null / unset>, toggle_shortcuts = <null / unset>, toggle_side_conversation = <null / unset>, toggle_vim_mode = <null / unset> }, list = { accept = <null / unset>, cancel = <null / unset>, jump_bottom = <null / unset>, jump_top = <null / unset>, move_down = <null / unset>, move_left = <null / unset>, move_right = <null / unset>, move_up = <null / unset>, page_down = <null / unset>, page_up = <null / unset> }, pager = { close = <null / unset>, close_transcript = <null / unset>, half_page_down = <null / unset>, half_page_up = <null / unset>, jump_bottom = <null / unset>, jump_top = <null / unset>, page_down = <null / unset>, page_up = <null / unset>, scroll_down = <null / unset>, scroll_up = <null / unset> }, vim_normal = { append_after_cursor = <null / unset>, append_line_end = <null / unset>, cancel_operator = <null / unset>, change_to_line_end = <null / unset>, delete_char = <null / unset>, delete_to_line_end = <null / unset>, enter_insert = <null / unset>, insert_line_start = <null / unset>, move_down = <null / unset>, move_left = <null / unset>, move_line_end = <null / unset>, move_line_start = <null / unset>, move_right = <null / unset>, move_up = <null / unset>, move_word_backward = <null / unset>, move_word_end = <null / unset>, move_word_forward = <null / unset>, open_line_above = <null / unset>, open_line_below = <null / unset>, paste_after = <null / unset>, start_change_operator = <null / unset>, start_delete_operator = <null / unset>, start_yank_operator = <null / unset>, substitute_char = <null / unset>, yank_line = <null / unset> }, vim_operator = { cancel = <null / unset>, delete_line = <null / unset>, motion_down = <null / unset>, motion_left = <null / unset>, motion_line_end = <null / unset>, motion_line_start = <null / unset>, motion_right = <null / unset>, motion_up = <null / unset>, motion_word_backward = <null / unset>, motion_word_end = <null / unset>, motion_word_forward = <null / unset>, select_around_text_object = <null / unset>, select_inner_text_object = <null / unset>, yank_line = <null / unset> }, vim_text_object = { backtick = <null / unset>, big_word = <null / unset>, braces = <null / unset>, brackets = <null / unset>, cancel = <null / unset>, double_quote = <null / unset>, parentheses = <null / unset>, single_quote = <null / unset>, word = <null / unset> } }
+# tui.keymap.approval = { approve = <null / unset>, approve_for_prefix = <null / unset>, approve_for_session = <null / unset>, cancel = <null / unset>, decline = <null / unset>, deny = <null / unset>, open_fullscreen = <null / unset>, open_thread = <null / unset> }
+# tui.keymap.approval.approve = <not declared by schema>
+# tui.keymap.approval.approve_for_prefix = <not declared by schema>
+# tui.keymap.approval.approve_for_session = <not declared by schema>
+# tui.keymap.approval.cancel = <not declared by schema>
+# tui.keymap.approval.decline = <not declared by schema>
+# tui.keymap.approval.deny = <not declared by schema>
+# tui.keymap.approval.open_fullscreen = <not declared by schema>
+# tui.keymap.approval.open_thread = <not declared by schema>
+# tui.keymap.chat = { decrease_reasoning_effort = <null / unset>, edit_queued_message = <null / unset>, increase_reasoning_effort = <null / unset>, interrupt_turn = <null / unset> }
+# tui.keymap.chat.decrease_reasoning_effort = <not declared by schema>
+# tui.keymap.chat.edit_queued_message = <not declared by schema>
+# tui.keymap.chat.increase_reasoning_effort = <not declared by schema>
+# tui.keymap.chat.interrupt_turn = <not declared by schema>
+# tui.keymap.composer = { history_search_next = <null / unset>, history_search_previous = <null / unset>, queue = <null / unset>, submit = <null / unset>, toggle_shortcuts = <null / unset> }
+# tui.keymap.composer.history_search_next = <not declared by schema>
+# tui.keymap.composer.history_search_previous = <not declared by schema>
+# tui.keymap.composer.queue = <not declared by schema>
+# tui.keymap.composer.submit = <not declared by schema>
+# tui.keymap.composer.toggle_shortcuts = <not declared by schema>
+# tui.keymap.editor = { delete_backward = <null / unset>, delete_backward_word = <null / unset>, delete_forward = <null / unset>, delete_forward_word = <null / unset>, insert_newline = <null / unset>, kill_line_end = <null / unset>, kill_line_start = <null / unset>, kill_whole_line = <null / unset>, move_down = <null / unset>, move_left = <null / unset>, move_line_end = <null / unset>, move_line_start = <null / unset>, move_right = <null / unset>, move_up = <null / unset>, move_word_left = <null / unset>, move_word_right = <null / unset>, yank = <null / unset> }
+# tui.keymap.editor.delete_backward = <not declared by schema>
+# tui.keymap.editor.delete_backward_word = <not declared by schema>
+# tui.keymap.editor.delete_forward = <not declared by schema>
+# tui.keymap.editor.delete_forward_word = <not declared by schema>
+# tui.keymap.editor.insert_newline = <not declared by schema>
+# tui.keymap.editor.kill_line_end = <not declared by schema>
+# tui.keymap.editor.kill_line_start = <not declared by schema>
+# tui.keymap.editor.kill_whole_line = <not declared by schema>
+# tui.keymap.editor.move_down = <not declared by schema>
+# tui.keymap.editor.move_left = <not declared by schema>
+# tui.keymap.editor.move_line_end = <not declared by schema>
+# tui.keymap.editor.move_line_start = <not declared by schema>
+# tui.keymap.editor.move_right = <not declared by schema>
+# tui.keymap.editor.move_up = <not declared by schema>
+# tui.keymap.editor.move_word_left = <not declared by schema>
+# tui.keymap.editor.move_word_right = <not declared by schema>
+# tui.keymap.editor.yank = <not declared by schema>
+# tui.keymap.global = { clear_terminal = <null / unset>, copy = <null / unset>, open_external_editor = <null / unset>, open_transcript = <null / unset>, queue = <null / unset>, submit = <null / unset>, toggle_fast_mode = <null / unset>, toggle_raw_output = <null / unset>, toggle_shortcuts = <null / unset>, toggle_side_conversation = <null / unset>, toggle_vim_mode = <null / unset> }
+# tui.keymap.global.clear_terminal = <not declared by schema>
+# tui.keymap.global.copy = <not declared by schema>
+# tui.keymap.global.open_external_editor = <not declared by schema>
+# tui.keymap.global.open_transcript = <not declared by schema>
+# tui.keymap.global.queue = <not declared by schema>
+# tui.keymap.global.submit = <not declared by schema>
+# tui.keymap.global.toggle_fast_mode = <not declared by schema>
+# tui.keymap.global.toggle_raw_output = <not declared by schema>
+# tui.keymap.global.toggle_shortcuts = <not declared by schema>
+# tui.keymap.global.toggle_side_conversation = <not declared by schema>
+# tui.keymap.global.toggle_vim_mode = <not declared by schema>
+# tui.keymap.list = { accept = <null / unset>, cancel = <null / unset>, jump_bottom = <null / unset>, jump_top = <null / unset>, move_down = <null / unset>, move_left = <null / unset>, move_right = <null / unset>, move_up = <null / unset>, page_down = <null / unset>, page_up = <null / unset> }
+# tui.keymap.list.accept = <not declared by schema>
+# tui.keymap.list.cancel = <not declared by schema>
+# tui.keymap.list.jump_bottom = <not declared by schema>
+# tui.keymap.list.jump_top = <not declared by schema>
+# tui.keymap.list.move_down = <not declared by schema>
+# tui.keymap.list.move_left = <not declared by schema>
+# tui.keymap.list.move_right = <not declared by schema>
+# tui.keymap.list.move_up = <not declared by schema>
+# tui.keymap.list.page_down = <not declared by schema>
+# tui.keymap.list.page_up = <not declared by schema>
+# tui.keymap.pager = { close = <null / unset>, close_transcript = <null / unset>, half_page_down = <null / unset>, half_page_up = <null / unset>, jump_bottom = <null / unset>, jump_top = <null / unset>, page_down = <null / unset>, page_up = <null / unset>, scroll_down = <null / unset>, scroll_up = <null / unset> }
+# tui.keymap.pager.close = <not declared by schema>
+# tui.keymap.pager.close_transcript = <not declared by schema>
+# tui.keymap.pager.half_page_down = <not declared by schema>
+# tui.keymap.pager.half_page_up = <not declared by schema>
+# tui.keymap.pager.jump_bottom = <not declared by schema>
+# tui.keymap.pager.jump_top = <not declared by schema>
+# tui.keymap.pager.page_down = <not declared by schema>
+# tui.keymap.pager.page_up = <not declared by schema>
+# tui.keymap.pager.scroll_down = <not declared by schema>
+# tui.keymap.pager.scroll_up = <not declared by schema>
+# tui.keymap.vim_normal = { append_after_cursor = <null / unset>, append_line_end = <null / unset>, cancel_operator = <null / unset>, change_to_line_end = <null / unset>, delete_char = <null / unset>, delete_to_line_end = <null / unset>, enter_insert = <null / unset>, insert_line_start = <null / unset>, move_down = <null / unset>, move_left = <null / unset>, move_line_end = <null / unset>, move_line_start = <null / unset>, move_right = <null / unset>, move_up = <null / unset>, move_word_backward = <null / unset>, move_word_end = <null / unset>, move_word_forward = <null / unset>, open_line_above = <null / unset>, open_line_below = <null / unset>, paste_after = <null / unset>, start_change_operator = <null / unset>, start_delete_operator = <null / unset>, start_yank_operator = <null / unset>, substitute_char = <null / unset>, yank_line = <null / unset> }
+# tui.keymap.vim_normal.append_after_cursor = <not declared by schema>
+# tui.keymap.vim_normal.append_line_end = <not declared by schema>
+# tui.keymap.vim_normal.cancel_operator = <not declared by schema>
+# tui.keymap.vim_normal.change_to_line_end = <not declared by schema>
+# tui.keymap.vim_normal.delete_char = <not declared by schema>
+# tui.keymap.vim_normal.delete_to_line_end = <not declared by schema>
+# tui.keymap.vim_normal.enter_insert = <not declared by schema>
+# tui.keymap.vim_normal.insert_line_start = <not declared by schema>
+# tui.keymap.vim_normal.move_down = <not declared by schema>
+# tui.keymap.vim_normal.move_left = <not declared by schema>
+# tui.keymap.vim_normal.move_line_end = <not declared by schema>
+# tui.keymap.vim_normal.move_line_start = <not declared by schema>
+# tui.keymap.vim_normal.move_right = <not declared by schema>
+# tui.keymap.vim_normal.move_up = <not declared by schema>
+# tui.keymap.vim_normal.move_word_backward = <not declared by schema>
+# tui.keymap.vim_normal.move_word_end = <not declared by schema>
+# tui.keymap.vim_normal.move_word_forward = <not declared by schema>
+# tui.keymap.vim_normal.open_line_above = <not declared by schema>
+# tui.keymap.vim_normal.open_line_below = <not declared by schema>
+# tui.keymap.vim_normal.paste_after = <not declared by schema>
+# tui.keymap.vim_normal.start_change_operator = <not declared by schema>
+# tui.keymap.vim_normal.start_delete_operator = <not declared by schema>
+# tui.keymap.vim_normal.start_yank_operator = <not declared by schema>
+# tui.keymap.vim_normal.substitute_char = <not declared by schema>
+# tui.keymap.vim_normal.yank_line = <not declared by schema>
+# tui.keymap.vim_operator = { cancel = <null / unset>, delete_line = <null / unset>, motion_down = <null / unset>, motion_left = <null / unset>, motion_line_end = <null / unset>, motion_line_start = <null / unset>, motion_right = <null / unset>, motion_up = <null / unset>, motion_word_backward = <null / unset>, motion_word_end = <null / unset>, motion_word_forward = <null / unset>, select_around_text_object = <null / unset>, select_inner_text_object = <null / unset>, yank_line = <null / unset> }
+# tui.keymap.vim_operator.cancel = <not declared by schema>
+# tui.keymap.vim_operator.delete_line = <not declared by schema>
+# tui.keymap.vim_operator.motion_down = <not declared by schema>
+# tui.keymap.vim_operator.motion_left = <not declared by schema>
+# tui.keymap.vim_operator.motion_line_end = <not declared by schema>
+# tui.keymap.vim_operator.motion_line_start = <not declared by schema>
+# tui.keymap.vim_operator.motion_right = <not declared by schema>
+# tui.keymap.vim_operator.motion_up = <not declared by schema>
+# tui.keymap.vim_operator.motion_word_backward = <not declared by schema>
+# tui.keymap.vim_operator.motion_word_end = <not declared by schema>
+# tui.keymap.vim_operator.motion_word_forward = <not declared by schema>
+# tui.keymap.vim_operator.select_around_text_object = <not declared by schema>
+# tui.keymap.vim_operator.select_inner_text_object = <not declared by schema>
+# tui.keymap.vim_operator.yank_line = <not declared by schema>
+# tui.keymap.vim_text_object = { backtick = <null / unset>, big_word = <null / unset>, braces = <null / unset>, brackets = <null / unset>, cancel = <null / unset>, double_quote = <null / unset>, parentheses = <null / unset>, single_quote = <null / unset>, word = <null / unset> }
+# tui.keymap.vim_text_object.backtick = <not declared by schema>
+# tui.keymap.vim_text_object.big_word = <not declared by schema>
+# tui.keymap.vim_text_object.braces = <not declared by schema>
+# tui.keymap.vim_text_object.brackets = <not declared by schema>
+# tui.keymap.vim_text_object.cancel = <not declared by schema>
+# tui.keymap.vim_text_object.double_quote = <not declared by schema>
+# tui.keymap.vim_text_object.parentheses = <not declared by schema>
+# tui.keymap.vim_text_object.single_quote = <not declared by schema>
+# tui.keymap.vim_text_object.word = <not declared by schema>
+# tui.model_availability_nux = {  }
+# tui.model_availability_nux."<name>" = <not declared by schema>
+# tui.notification_condition = "unfocused"
+# tui.notification_method = "auto"
+# tui.notifications = true
+# tui.pet = <null / unset>
+# tui.pet_anchor = "composer"
+# tui.raw_output_mode = false
+# tui.resume_cwd = <null / unset>
+# tui.session_picker_view = <null / unset>
+# tui.show_tooltips = true
+# tui.status_line = <null / unset>
+# tui.status_line_use_colors = true
+# tui.terminal_resize_reflow_max_rows = <null / unset>
+# tui.terminal_title = <null / unset>
+# tui.theme = <null / unset>
+# tui.vim_mode_default = false
+
+# --- web_search ---
+# web_search = <not declared by schema>
+
+# --- windows ---
+# windows = <null / unset>
+# windows.sandbox = <not declared by schema>
+# windows.sandbox_private_desktop = <not declared by schema>
