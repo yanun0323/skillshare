@@ -1,0 +1,5 @@
+interface:
+  display_name: 'No Skill'
+  short_description: 'Disable optional skill loading for the current and subsequent work.'
+policy:
+  allow_implicit_invocation: false

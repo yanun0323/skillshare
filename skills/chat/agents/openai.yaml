@@ -1,0 +1,5 @@
+interface:
+  display_name: "Chat"
+  short_description: "Answer questions without change files"
+policy:
+  allow_implicit_invocation: false

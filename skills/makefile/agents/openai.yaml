@@ -1,0 +1,5 @@
+interface:
+  display_name: 'Makefile'
+  short_description: 'Entrypoint standardization'
+policy:
+  allow_implicit_invocation: true
