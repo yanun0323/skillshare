@@ -23,9 +23,9 @@ collaboration_modes = false
 computer_use = false
 default_mode_request_user_input = true
 fast_mode = true
-multi_agent = true
+multi_agent = false
 multi_agent_v2 = false
-multi_agent_mode = true
+multi_agent_mode = false
 hooks = true
 in_app_browser = false
 image_generation = true
@@ -114,9 +114,13 @@ enabled = false
 enabled = false
 
 [marketplaces.ponytail]
-last_updated = "2026-08-05T02:34:45Z"
+last_updated = "2026-08-12T21:37:14Z"
+last_revision = "2ed6c52c9d7e5e56942508591085fd45dea277d3"
 source_type = "git"
 source = "https://github.com/DietrichGebert/ponytail.git"
 
 [mcp_servers.openaiDeveloperDocs]
 url = "https://developers.openai.com/mcp"
+
+[projects."/Users/yanun/.config/skillshare"]
+trust_level = "trusted"

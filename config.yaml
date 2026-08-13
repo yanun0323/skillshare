@@ -30,6 +30,7 @@ extras:
     source: ~/.config/skillshare/extras/codex/instructions/cli
     targets:
       - path: ~/.codex-cli
+      - path: ~/.chat
   - name: claude-agents
     source: ~/.config/skillshare/extras/claude/agents
     targets:
@@ -62,9 +63,9 @@ extras:
       - path: ~/.codex-cli/hooks
       - path: ~/.claude/hooks
 ignore:
-  - "**/.DS_Store"
-  - "**/.git/**"
-  - "**/node_modules/**"
+  - '**/.DS_Store'
+  - '**/.git/**'
+  - '**/node_modules/**'
   - __pycache__/
 audit:
   block_threshold: INFO

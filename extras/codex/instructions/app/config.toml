@@ -100,7 +100,7 @@ enabled = true
 enabled = true
 
 [marketplaces.ponytail]
-last_updated = "2026-08-10T03:40:01Z"
+last_updated = "2026-08-12T21:36:41Z"
 last_revision = "2ed6c52c9d7e5e56942508591085fd45dea277d3"
 source_type = "git"
 source = "https://github.com/DietrichGebert/ponytail.git"
