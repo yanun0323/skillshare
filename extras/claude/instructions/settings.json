@@ -13,10 +13,10 @@
     "CLAUDE_CODE_STATUS_LINE": "${provider} · ${model} · ${context-used} · ${codex-five-hour-limit} · ${codex-weekly-limit} · ${codex-five-hour-reset} · ${codex-weekly-reset}"
   },
   "permissions": {
-    "allow": [ ],
+    "allow": [],
     "defaultMode": "bypassPermissions"
   },
-  "model": "opus",
+  "model": "opus[1m]",
   "hooks": {
     "PreToolUse": [
       {
@@ -46,7 +46,7 @@
     "typescript-lsp@claude-plugins-official": true,
     "rust-analyzer-lsp@claude-plugins-official": true
   },
-  "extraKnownMarketplaces": { },
+  "extraKnownMarketplaces": {},
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark",
   "editorMode": "normal",
