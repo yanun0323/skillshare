@@ -60,6 +60,8 @@ extras:
         mode: copy
       - path: ~/.codex-cli
         mode: copy
+      - path: ~/.chat
+        mode: copy
   - name: global-agents
     source: ~/.config/skillshare/extras/all/agents
     targets:
@@ -75,6 +77,8 @@ extras:
       - path: ~/.codex/hooks
         mode: copy
       - path: ~/.codex-cli/hooks
+        mode: copy
+      - path: ~/.chat/hooks
         mode: copy
       - path: ~/.claude/hooks
         mode: copy
