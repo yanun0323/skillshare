@@ -29,4 +29,4 @@ update-skill:
 
 ## sync: sync skillshare to all target
 sync:
-	@skillshare sync --all -f; skillshare sync -f
+	@skillshare sync extras -f; skillshare sync -f

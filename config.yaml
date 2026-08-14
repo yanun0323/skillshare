@@ -22,15 +22,19 @@ extras:
     source: ~/.config/skillshare/extras/claude/instructions
     targets:
       - path: ~/.claude
+        mode: copy
   - name: codex-instructions-app
     source: ~/.config/skillshare/extras/codex/instructions/app
     targets:
       - path: ~/.codex
+        mode: copy
   - name: codex-instructions-cli
     source: ~/.config/skillshare/extras/codex/instructions/cli
     targets:
       - path: ~/.codex-cli
+        mode: copy
       - path: ~/.chat
+        mode: copy
   - name: claude-agents
     source: ~/.config/skillshare/extras/claude/agents
     targets:
@@ -47,6 +51,15 @@ extras:
     source: ~/.config/skillshare/extras/pi/extensions
     targets:
       - path: ~/.pi/agent/extensions/
+  - name: global-instructions
+    source: ~/.config/skillshare/extras/all/instructions
+    targets:
+      - path: ~/.claude
+        mode: copy
+      - path: ~/.codex
+        mode: copy
+      - path: ~/.codex-cli
+        mode: copy
   - name: global-agents
     source: ~/.config/skillshare/extras/all/agents
     targets:
@@ -60,8 +73,11 @@ extras:
     source: ~/.config/skillshare/extras/all/hooks
     targets:
       - path: ~/.codex/hooks
+        mode: copy
       - path: ~/.codex-cli/hooks
+        mode: copy
       - path: ~/.claude/hooks
+        mode: copy
 ignore:
   - '**/.DS_Store'
   - '**/.git/**'
