@@ -16,8 +16,6 @@ suppress_unstable_features_warning = false
 
 [features]
 apps = false
-browser_use = false
-browser_use_external = false
 chronicle = false
 collaboration_modes = false
 computer_use = false
@@ -27,18 +25,9 @@ multi_agent = false
 multi_agent_v2 = false
 multi_agent_mode = false
 hooks = true
-in_app_browser = false
 image_generation = true
 memories = false
-plugin_sharing = false
 plugins = false
-remote_compaction_v2 = false
-skill_mcp_dependency_install = false
-tool_call_mcp_elicitation = false
-tool_suggest = false
-js_repl = false
-js_repl_tools_only = false
-enable_mcp_apps = false
 sqlite = false
 
 
@@ -124,3 +113,4 @@ url = "https://developers.openai.com/mcp"
 
 [projects."/Users/yanun/.config/skillshare"]
 trust_level = "trusted"
+
