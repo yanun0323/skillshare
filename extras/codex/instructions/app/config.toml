@@ -14,26 +14,24 @@ approvals_reviewer = "auto_review"
 service_tier = "fast"
 suppress_unstable_features_warning = false
 
-notify = ["/Users/yanun/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
+notify = [
+    "/Users/yanun/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient",
+    "turn-ended",
+]
 
 [features]
 apps = true
-browser_use = true
-browser_use_external = true
 computer_use = true
+collaboration_modes = false
 default_mode_request_user_input = true
 fast_mode = true
 multi_agent = true
 multi_agent_v2 = false
 multi_agent_mode = true
 hooks = true
-in_app_browser = true
 image_generation = true
 memories = true
-plugin_sharing = true
-plugins = true
 sqlite = false
-js_repl = false
 
 
 [memories]
