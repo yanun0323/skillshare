@@ -1,0 +1,5 @@
+interface:
+  display_name: 'Show me ASCII'
+  short_description: 'Creates beautiful ASCII art visualizations for plans, architectures, workflows, and data.'
+policy:
+  allow_implicit_invocation: true

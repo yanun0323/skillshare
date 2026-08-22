@@ -122,10 +122,10 @@
     "bro": {
       "source": "github.com/yanun0323/skills/skills/bro",
       "type": "github-subdir",
-      "installed_at": "2026-08-20T13:49:34.288752+08:00",
+      "installed_at": "2026-08-20T18:29:58.823015+08:00",
       "repo_url": "https://github.com/yanun0323/skills.git",
       "subdir": "skills/bro",
-      "version": "cd34afa",
+      "version": "fe66d61",
       "tree_hash": "985764f8218174a2ef2c525a229275c747ec437a",
       "file_hashes": {
         "SKILL.md": "sha256:a40a2bcc9637c90dcf6777da90ad93434b7fe3eb1affc5b0b47a9123f3eed43a",
@@ -135,10 +135,10 @@
     "chat": {
       "source": "github.com/yanun0323/skills/skills/chat",
       "type": "github-subdir",
-      "installed_at": "2026-08-20T13:49:34.31159+08:00",
+      "installed_at": "2026-08-20T18:29:58.853619+08:00",
       "repo_url": "https://github.com/yanun0323/skills.git",
       "subdir": "skills/chat",
-      "version": "cd34afa",
+      "version": "fe66d61",
       "tree_hash": "3208537ba98d89d7a1d05470bb8fad0d6ce78c40",
       "file_hashes": {
         "SKILL.md": "sha256:356b41379e3bab77a10d208f72a6f4569f694cce665453fc951b54f397bb5925",
@@ -229,10 +229,10 @@
     "go": {
       "source": "github.com/yanun0323/skills/skills/go",
       "type": "github-subdir",
-      "installed_at": "2026-08-20T13:49:34.330896+08:00",
+      "installed_at": "2026-08-20T18:29:58.872052+08:00",
       "repo_url": "https://github.com/yanun0323/skills.git",
       "subdir": "skills/go",
-      "version": "cd34afa",
+      "version": "fe66d61",
       "tree_hash": "ce48882793ca77c110aba2fe7d3da2999f533ca9",
       "file_hashes": {
         "SKILL.md": "sha256:df82e9a34e559451e332a05d5308186b362821ea0d07813e40c95ccf31b1753a",
@@ -255,23 +255,23 @@
     "makefile": {
       "source": "github.com/yanun0323/skills/skills/makefile",
       "type": "github-subdir",
-      "installed_at": "2026-08-20T13:49:34.348459+08:00",
+      "installed_at": "2026-08-20T18:29:58.88781+08:00",
       "repo_url": "https://github.com/yanun0323/skills.git",
       "subdir": "skills/makefile",
-      "version": "cd34afa",
-      "tree_hash": "cc05789bb977f4c9b9bc53e283a1045896f52f94",
+      "version": "fe66d61",
+      "tree_hash": "270d24797d24c2e0318154e738ec03269fa21748",
       "file_hashes": {
-        "SKILL.md": "sha256:7765cceb8e6f07546a39b9dddbcabcbb1ecb35bc8a9e1b569e3ef6af49366bc4",
+        "SKILL.md": "sha256:79d357316d216c57b9b25ea5aa73cf1b71d2c83748f8e6cb2001774976912082",
         "agents/openai.yaml": "sha256:1daf9b850568728c391efcd074d731247260a512663f7a0bf985bbd9d10813cb"
       }
     },
     "no-skill": {
       "source": "github.com/yanun0323/skills/skills/no-skill",
       "type": "github-subdir",
-      "installed_at": "2026-08-20T13:49:34.362935+08:00",
+      "installed_at": "2026-08-20T18:29:58.903037+08:00",
       "repo_url": "https://github.com/yanun0323/skills.git",
       "subdir": "skills/no-skill",
-      "version": "cd34afa",
+      "version": "fe66d61",
       "tree_hash": "3b0d6663666046ee376266da1c41c11f35cf2dbb",
       "file_hashes": {
         "SKILL.md": "sha256:114e4470eecd79c0a13588a1eabb411ce115feaa35042962cb7de3d15c80914e",
@@ -312,6 +312,20 @@
       "tree_hash": "7589bbd9f9027631e153b9ad72067b349dfd4da2",
       "file_hashes": {
         "SKILL.md": "sha256:76addbc1c5293d5a2da42828f4bff1cee5050492d06c194354df2f6329398df5"
+      }
+    },
+    "show-me-ascii": {
+      "source": "github.com/yanun0323/skills/skills/show-me-ascii",
+      "type": "github-subdir",
+      "installed_at": "2026-08-20T18:29:58.927773+08:00",
+      "repo_url": "https://github.com/yanun0323/skills.git",
+      "subdir": "skills/show-me-ascii",
+      "version": "fe66d61",
+      "tree_hash": "20b8ffef9a90afe625bb42997b7a237486f42943",
+      "file_hashes": {
+        "SKILL.md": "sha256:6f82b7cf84a3cb09abf358ae9491175762630ead82d183d7a346a3adfaf1f2ab",
+        "agents/openai.yaml": "sha256:07d35de6384f8ffd579801da7d26174e07c24916fe6e52b204c354e39d5718eb",
+        "examples/devprep-architecture.md": "sha256:66cdf0dd979f594e409a27069a1fb0ede147a53019bff75265dfc1c09ef95453"
       }
     },
     "tdd": {
