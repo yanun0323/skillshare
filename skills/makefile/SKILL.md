@@ -53,10 +53,14 @@ When ports, environment values, services, or build behavior change, update the c
 Use this only when the repository needs a new Makefile; remove any line the actual workflows do not use.
 
 ```make
+.DEFAULT_GOAL := help
+
 -include Makefile.env
 export
 
 .PHONY: $(wildcard *)
+
+ARGS := $(word 2,$(MAKECMDGOALS))
 
 ## help: show help
 help:
@@ -66,7 +70,8 @@ help:
 	@sed -n 's/^## //p' Makefile | column -t -s ':' | sed -e 's/^/\t/'
 	@echo ""
 
-ARGS := $(word 2,$(MAKECMDGOALS))
+
+# NOTE: Add command before this Footer
 %:
 	@:
 ```
